@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg aria-labelledby="title-linkedin" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+	<title id="title-linkedin" lang="en">LinkedIn</title>
+  <g>
+    <rect width="32" height="32" rx="1.81" ry="1.81" fill="#0d7fb7"/>
+    <g>
+      <path d="M22.8,26.65V19c0-1.9-.6-3.1-2.3-3.1a3,3,0,0,0-2.6,1.7,2.82,2.82,0,0,0-.4,1.1v8H12.6v-15h4.9v2.8h0.4a5.43,5.43,0,0,1,4.6-2.7c3.1,0,5.1,2.4,5.1,6.7v8.1H22.8Z" transform="translate(0 0)" fill="#fff"/>
+      <rect x="5.5" y="11.75" width="4.9" height="14.9" fill="#fff"/>
+      <path d="M8,9.45A2.48,2.48,0,0,1,5.5,7s0,0,0,0a2.39,2.39,0,0,1,2.38-2.4H8a2.45,2.45,0,0,1,0,4.9" transform="translate(0 0)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

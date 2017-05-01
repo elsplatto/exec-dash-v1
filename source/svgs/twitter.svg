@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg aria-labelledby="title-twitter" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+	<title id="title-twitter" lang="en">Twitter</title>
+  <g>
+    <rect width="32" height="32" rx="1.81" ry="1.81" fill="#0babe3"/>
+    <path d="M26.7,9.5a10.27,10.27,0,0,1-2.5.7,4.15,4.15,0,0,0,1.9-2.4,8.62,8.62,0,0,1-2.8,1.1,4.16,4.16,0,0,0-3.2-1.4,4.44,4.44,0,0,0-4.4,4.4,3.4,3.4,0,0,0,.1,1,12.25,12.25,0,0,1-9-4.6,4,4,0,0,0-.6,2.2,4.51,4.51,0,0,0,2,3.7,4.55,4.55,0,0,1-2-.5v0.1a4.4,4.4,0,0,0,3.5,4.3,5,5,0,0,1-1.2.2,2,2,0,0,1-.8-0.1,4.42,4.42,0,0,0,4.1,3,8.66,8.66,0,0,1-5.4,1.9,3.08,3.08,0,0,1-1-.1,12.57,12.57,0,0,0,6.7,2A12.41,12.41,0,0,0,24.6,12.68q0-.09,0-0.18V11.9a12.06,12.06,0,0,0,2.1-2.4" fill="#fff"/>
+  </g>
+</svg>

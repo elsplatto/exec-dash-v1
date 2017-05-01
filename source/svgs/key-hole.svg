@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg aria-labelledby="title-key-hole" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+	<title id="title-key-hole" lang="en">Key-hole</title>
+
+	<path fill="#5b6871" class="icons-background" d="M16,0C7.2,0,0,7.2,0,16s7.2,16,16,16s16-7.2,16-16S24.8,0,16,0z M18.1,15.4L20,24h-8l1.9-8.6
+		c-1.1-0.7-1.9-2-1.9-3.4c0-2.2,1.8-4,4-4s4,1.8,4,4C20,13.4,19.2,14.7,18.1,15.4z"/>
+</svg>

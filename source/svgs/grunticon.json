@@ -1,0 +1,413 @@
+{
+	"checkbox-off": [
+		".checkbox-input + .checkbox-text:after"
+	],
+	"checkbox-off-disabled": [
+		".checkbox-input:disabled + .checkbox-text:after"
+	],
+	"checkbox-on": [
+		".checkbox-input:checked + .checkbox-text:after"
+	],
+	"checkbox-on-disabled": [
+		".checkbox-input:disabled:checked + .checkbox-text:after"
+	],
+	"radio-off": [
+		".radio-input + .radio-text:after"
+	],
+	"radio-off-disabled": [
+		".radio-input:disabled + .radio-text:after"
+	],
+	"radio-on": [
+		".radio-input:checked + .radio-text:after"
+	],
+	"radio-on-disabled": [
+		".radio-input:disabled:checked + .radio-text:after"
+	],
+	"credit-card": [
+		".icon-credit-card"
+	],
+	"dollar": [
+		".icon-dollar"
+	],
+	"growth": [
+		".icon-growth"
+	],
+	"limit": [
+		".icon-limit"
+	],
+	"money-in": [
+		".icon-money-in"
+	],
+	"money-out": [
+		".icon-money-out"
+	],
+	"percent": [
+		".icon-percent"
+	],
+	"super": [
+		".icon-super"
+	],
+	"switch": [
+		".icon-switch"
+	],
+	"business-person": [
+		".icon-business-person"
+	],
+	"eftpos": [
+		".icon-eftpos"
+	],
+	"office": [
+		".icon-office"
+	],
+	"shop": [
+		".icon-shop"
+	],
+	"house": [
+		".icon-house"
+	],
+	"people": [
+		".icon-people"
+	],
+	"person": [
+		".icon-person"
+	],
+	"australia": [
+		".icon-australia"
+	],
+	"chat": [
+		".icon-chat"
+	],
+	"clock": [
+		".icon-clock"
+	],
+	"edit": [
+		".icon-edit"
+	],
+	"email": [
+		".icon-email"
+	],
+	"id-card": [
+		".icon-id-card"
+	],
+	"padlock": [
+		".icon-padlock"
+	],
+	"print": [
+		".icon-print"
+	],
+	"sms": [
+		".icon-sms"
+	],
+	"stopwatch": [
+		".icon-stopwatch"
+	],
+	"telephone": [
+		".icon-telephone"
+	],
+	"tick": [
+		".icon-tick"
+	],
+	"excel-file": [
+		".icon-excel-file"
+	],
+	"generic-file": [
+		".icon-generic-file"
+	],
+	"pdf-file": [
+		".icon-pdf-file"
+	],
+	"word-file": [
+		".icon-word-file"
+	],
+	"zip-file": [
+		".icon-zip-file"
+	],
+	"atm": [
+		".icon-atm"
+	],
+	"calculator": [
+		".icon-calculator"
+	],
+	"calendar": [
+		".icon-calendar"
+	],
+	"camera": [
+		".icon-camera"
+	],
+	"message": [
+		".icon-message"
+	],
+	"mobile-pay": [
+		".icon-mobile-pay"
+	],
+	"notification": [
+		".icon-notification"
+	],
+	"paypass": [
+		".icon-paypass"
+	],
+	"quick-balance": [
+		".icon-quick-balance"
+	],
+	"service-bell": [
+		".icon-service-bell"
+	],
+	"settings": [
+		".icon-settings"
+	],
+	"shelf-menu": [
+		".icon-shelf-menu"
+	],
+	"to-mobile": [
+		".icon-to-mobile"
+	],
+	"bar-chart": [
+		".icon-bar-chart"
+	],
+	"invest": [
+		".icon-invest"
+	],
+	"pie-chart": [
+		".icon-pie-chart"
+	],
+	"accessibility": [
+		".icon-accessibility"
+	],
+	"car": [
+		".icon-car"
+	],
+	"geolocation": [
+		".icon-geolocation"
+	],
+	"map-pin": [
+		".icon-map-pin"
+	],
+	"map": [
+		".icon-map"
+	],
+	"transport": [
+		".icon-transport"
+	],
+	"walk": [
+		".icon-walk"
+	],
+	"wheelchair": [
+		".icon-wheelchair"
+	],
+	"android": [
+		".icon-android"
+	],
+	"apple": [
+		".icon-apple"
+	],
+	"desktop": [
+		".icon-desktop"
+	],
+	"phone": [
+		".icon-phone"
+	],
+	"tablet": [
+		".icon-tablet"
+	],
+	"windows-new": [
+		".icon-windows-new"
+	],
+	"account": [
+		".icon-account"
+	],
+	"bpay": [
+		".icon-bpay"
+	],
+	"history-clock": [
+		".icon-history-clock"
+	],
+	"move-from": [
+		".icon-move-from"
+	],
+	"move-to": [
+		".icon-move-to"
+	],
+	"transfer": [
+		".icon-transfer"
+	],
+	"dropbox": [
+		".icon-dropbox"
+	],
+	"facebook": [
+		".icon-facebook"
+	],
+	"github": [
+		".icon-github"
+	],
+	"google-plus": [
+		".icon-google-plus"
+	],
+	"linkedin": [
+		".icon-linkedin"
+	],
+	"rss": [
+		".icon-rss"
+	],
+	"share": [
+		".icon-share"
+	],
+	"star1": [
+		".icon-star1"
+	],
+	"star2": [
+		".icon-star2"
+	],
+	"star3": [
+		".icon-star3"
+	],
+	"twitter": [
+		".icon-twitter"
+	],
+	"youtube": [
+		".icon-youtube"
+	],
+	"add-a": [
+		".icon-add-a"
+	],
+	"add-b": [
+		".icon-add-b"
+	],
+	"backspace": [
+		".icon-backspace"
+	],
+	"close": [
+		".icon-close"
+	],
+	"delete": [
+		".icon-delete"
+	],
+	"filter": [
+		".icon-filter"
+	],
+	"pause": [
+		".icon-pause"
+	],
+	"play": [
+		".icon-play"
+	],
+	"remove": [
+		".icon-remove"
+	],
+	"download": [
+		".icon-download"
+	],
+	"new-window": [
+		".icon-new-window"
+	],
+	"refresh": [
+		".icon-refresh"
+	],
+	"search": [
+		".icon-search"
+	],
+	"upload": [
+		".icon-upload"
+	],
+	"write": [
+		".icon-write"
+	],
+	"book": [
+		".icon-book"
+	],
+	"compass": [
+		".icon-compass"
+	],
+	"cross": [
+		".icon-cross"
+	],
+	"cube": [
+		".icon-cube"
+	],
+	"global": [
+		".icon-global"
+	],
+	"idea": [
+		".icon-idea"
+	],
+	"key": [
+		".icon-key"
+	],
+	"more": [
+		".icon-more"
+	],
+	"umbrella": [
+		".icon-umbrella"
+	],
+	"wallet": [
+		".icon-wallet"
+	],
+	"alert": [
+		".icon-alert"
+	],
+	"face-happy": [
+		".icon-face-happy"
+	],
+	"face-hmm": [
+		".icon-face-hmm"
+	],
+	"face-sad": [
+		".icon-face-sad"
+	],
+	"help": [
+		".icon-help"
+	],
+	"info": [
+		".icon-info"
+	],
+	"bank": [
+		".icon-bank"
+	],
+	"key-hole": [
+		".icon-key-hole"
+	],
+	"ticklist": [
+		".lists.lists-tick > li:after"
+	],
+	"linklist": [
+		".lists.lists-linklist > li:after"
+	],
+	"bom-shield": [
+		".logo-bom-shield"
+	],
+	"bom": [
+		".logo-bom"
+	],
+	"bsa-stacked": [
+		".logo-bsa-stacked"
+	],
+	"bsa": [
+		".logo-bsa"
+	],
+	"bt-stacked": [
+		".logo-bt-stacked"
+	],
+	"bt": [
+		".logo-bt"
+	],
+	"stg-dragon": [
+		".logo-stg-dragon"
+	],
+	"stg": [
+		".logo-stg"
+	],
+	"wbc-live": [
+		".logo-wbc-live"
+	],
+	"wbc": [
+		".logo-wbc"
+	],
+	"wbc-200": [
+		".logo-wbc-200"
+	],
+	"wbg": [
+		".logo-wbg"
+	],
+	"symbol": [
+		"selector"
+	]
+}

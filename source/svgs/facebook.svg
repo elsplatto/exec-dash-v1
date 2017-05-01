@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg aria-labelledby="title-facebook" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+	<title id="title-facebook" lang="en">Facebook</title>
+  <g>
+    <rect width="32" height="32" rx="1.81" ry="1.81" fill="#3c619d"/>
+    <path d="M22.1,32V19.6h4.2l0.6-4.8H22.1V11.7c0-1.4.4-2.4,2.4-2.4H27V5a25.11,25.11,0,0,0-3.7-.2c-3.7,0-6.2,2.3-6.2,6.4v3.6H12.9v4.8h4.2V32h5Z" transform="translate(0 0)" fill="#fff"/>
+  </g>
+</svg>
