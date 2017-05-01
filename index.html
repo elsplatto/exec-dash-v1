@@ -163,7 +163,7 @@
 							CB
 							</div>
 
-							<div class="headline-holder top-margin4-xs">
+							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
 								<span class="main-callout" id="marginCBIndex"></span>
 								<span class="change-indicator icon icon-size-sm" id="marginCBChangeIndicator" data-grunticon-embed></span>
 								<span class="change-text" id="marginCBChangeText"></span>
@@ -177,7 +177,7 @@
 							BB
 							</div>
 
-							<div class="headline-holder top-margin4-xs">
+							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
 								<span class="main-callout" id="marginBBIndex"></span>
 								<span class="change-indicator icon icon-size-sm" id="marginBBChangeIndicator" data-grunticon-embed></span>
 								<span class="change-text" id="marginBBChangeText"></span>
@@ -187,17 +187,59 @@
 						</div>
 
 						<div class="col-xs-2 card">
-							<p class="size-test"></p>
+							<div class="graph-header top-margin3-xs">
+							WIB
+							</div>
+
+							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
+								<span class="main-callout" id="marginWIBIndex"></span>
+								<span class="change-indicator icon icon-size-sm" id="marginWIBChangeIndicator" data-grunticon-embed></span>
+								<span class="change-text" id="marginWIBChangeText"></span>
+							</div>
+
+							<div class="ct-chart ct-golden-section standard-chart" id="marginWIBChart"></div>
 						</div>
 
 						<div class="col-xs-2 card">
+							<div class="graph-header top-margin3-xs">
+							BT
+							</div>
+
+							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
+								<span class="main-callout" id="marginBTIndex"></span>
+								<span class="change-indicator icon icon-size-sm" id="marginBTChangeIndicator" data-grunticon-embed></span>
+								<span class="change-text" id="marginBTChangeText"></span>
+							</div>
+
+							<div class="ct-chart ct-golden-section standard-chart" id="marginBTChart"></div>
 						</div>
 						
 						<div class="col-xs-2 card">
-							<p class="size-test"></p>
+							<div class="graph-header top-margin3-xs">
+							WNZ
+							</div>
+
+							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
+								<span class="main-callout" id="marginWNZIndex"></span>
+								<span class="change-indicator icon icon-size-sm" id="marginWNZChangeIndicator" data-grunticon-embed></span>
+								<span class="change-text" id="marginWNZChangeText"></span>
+							</div>
+
+							<div class="ct-chart ct-golden-section standard-chart" id="marginWNZChart"></div>
 						</div>
 						
 						<div class="col-xs-2 card">
+							<div class="graph-header top-margin3-xs">
+							GBU
+							</div>
+
+							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
+								<span class="main-callout" id="marginGBUIndex"></span>
+								<span class="change-indicator icon icon-size-sm" id="marginGBUChangeIndicator" data-grunticon-embed></span>
+								<span class="change-text" id="marginGBUChangeText"></span>
+							</div>
+
+							<div class="ct-chart ct-golden-section standard-chart" id="marginGBUChart"></div>
 						</div>
 
 					</div>
@@ -488,6 +530,206 @@
 		}
 		else if (basePointChange < 0) {
 			$('#marginBBChangeIndicator').addClass('symbol-triangle dir-down');
+		}
+
+		var marginWIBChart = new Chartist.Line('#marginWIBChart', {
+		  // Naming the series with the series object array notation
+  		labels: ['1', '2', '3', '4', '5', '6', '7', '8'],
+		  series: [{
+		    name: 'wib',
+		    data: [-0.7, -1, -0.5, -0.6, 2, 1, -0.05, -2, 0, 1.8, 0.4, 0.49]
+		  }]
+		}, {
+		  fullWidth: true,
+		  height: '60%',
+		  series: {		    
+		    'wib': {
+		      showPoint: false
+		    }
+		  },
+		  axisX: {
+		    showGrid: false,
+		    showLabel: false,
+		    offset: 0
+		  },
+		  axisY: {
+		    showGrid: false,
+		    showLabel: false,
+		    offset: 0
+		  },
+		  chartPadding: 1
+		}, [
+		  ['screen and (max-width: 320px)', {
+		    series: {
+		      'wib': {
+		        lineSmooth: Chartist.Interpolation.none(),
+		        showPoint: true
+		      }
+		    }
+		  }]
+		]);
+
+		basePointChange = calculateBasePointChange(marginWIBChart);
+
+		$('#marginWIBIndex').text(getLastIndex(marginWIBChart));
+
+		$('#marginWIBChangeText').text(basePointChange + ' bps');
+
+		if (basePointChange > 0) {
+			$('#marginWIBChangeIndicator').addClass('symbol-triangle');
+		}
+		else if (basePointChange < 0) {
+			$('#marginWIBChangeIndicator').addClass('symbol-triangle dir-down');
+		}
+
+		var marginBTChart = new Chartist.Line('#marginBTChart', {
+		  // Naming the series with the series object array notation
+  		labels: ['1', '2', '3', '4', '5', '6', '7', '8'],
+		  series: [{
+		    name: 'bt',
+		    data: [0.7, 1, -0.5, -0.6, 0, 0.6, -0.15, -0.3, 0, 1.28, 0.5, 0.32]
+		  }]
+		}, {
+		  fullWidth: true,
+		  height: '60%',
+		  series: {		    
+		    'bt': {
+		      showPoint: false
+		    }
+		  },
+		  axisX: {
+		    showGrid: false,
+		    showLabel: false,
+		    offset: 0
+		  },
+		  axisY: {
+		    showGrid: false,
+		    showLabel: false,
+		    offset: 0
+		  },
+		  chartPadding: 1
+		}, [
+		  ['screen and (max-width: 320px)', {
+		    series: {
+		      'bt': {
+		        lineSmooth: Chartist.Interpolation.none(),
+		        showPoint: true
+		      }
+		    }
+		  }]
+		]);
+
+		basePointChange = calculateBasePointChange(marginBTChart);
+
+		$('#marginBTIndex').text(getLastIndex(marginBTChart));
+
+		$('#marginBTChangeText').text(basePointChange + ' bps');
+
+		if (basePointChange > 0) {
+			$('#marginBTChangeIndicator').addClass('symbol-triangle');
+		}
+		else if (basePointChange < 0) {
+			$('#marginBTChangeIndicator').addClass('symbol-triangle dir-down');
+		}
+
+		var marginWNZChart = new Chartist.Line('#marginWNZChart', {
+		  // Naming the series with the series object array notation
+  		labels: ['1', '2', '3', '4', '5', '6', '7', '8'],
+		  series: [{
+		    name: 'wnz',
+		    data: [1.7, 1, -0.02, -0.6, 0, 0.6, -0.15, 0.3, 0, 0.28, 1.25, 1.32]
+		  }]
+		}, {
+		  fullWidth: true,
+		  height: '60%',
+		  series: {		    
+		    'wnz': {
+		      showPoint: false
+		    }
+		  },
+		  axisX: {
+		    showGrid: false,
+		    showLabel: false,
+		    offset: 0
+		  },
+		  axisY: {
+		    showGrid: false,
+		    showLabel: false,
+		    offset: 0
+		  },
+		  chartPadding: 1
+		}, [
+		  ['screen and (max-width: 320px)', {
+		    series: {
+		      'wnz': {
+		        lineSmooth: Chartist.Interpolation.none(),
+		        showPoint: true
+		      }
+		    }
+		  }]
+		]);
+
+		basePointChange = calculateBasePointChange(marginWNZChart);
+
+		$('#marginWNZIndex').text(getLastIndex(marginWNZChart));
+
+		$('#marginWNZChangeText').text(basePointChange + ' bps');
+
+		if (basePointChange > 0) {
+			$('#marginWNZChangeIndicator').addClass('symbol-triangle');
+		}
+		else if (basePointChange < 0) {
+			$('#marginWNZChangeIndicator').addClass('symbol-triangle dir-down');
+		}
+
+		var marginGBUChart = new Chartist.Line('#marginGBUChart', {
+		  // Naming the series with the series object array notation
+  		labels: ['1', '2', '3', '4', '5', '6', '7', '8'],
+		  series: [{
+		    name: 'gbu',
+		    data: [1.7, 1, -0.02, -0.6, 0, 0.16, -0.15, 0.3, 0, 0.28, 1.35, 1.39]
+		  }]
+		}, {
+		  fullWidth: true,
+		  height: '60%',
+		  series: {		    
+		    'gbu': {
+		      showPoint: false
+		    }
+		  },
+		  axisX: {
+		    showGrid: false,
+		    showLabel: false,
+		    offset: 0
+		  },
+		  axisY: {
+		    showGrid: false,
+		    showLabel: false,
+		    offset: 0
+		  },
+		  chartPadding: 1
+		}, [
+		  ['screen and (max-width: 320px)', {
+		    series: {
+		      'gbu': {
+		        lineSmooth: Chartist.Interpolation.none(),
+		        showPoint: true
+		      }
+		    }
+		  }]
+		]);
+
+		basePointChange = calculateBasePointChange(marginGBUChart);
+
+		$('#marginGBUIndex').text(getLastIndex(marginGBUChart));
+
+		$('#marginGBUChangeText').text(basePointChange + ' bps');
+
+		if (basePointChange > 0) {
+			$('#marginGBUChangeIndicator').addClass('symbol-triangle');
+		}
+		else if (basePointChange < 0) {
+			$('#marginGBUChangeIndicator').addClass('symbol-triangle dir-down');
 		}
 
 		function calculateBasePointChange(obj) {
