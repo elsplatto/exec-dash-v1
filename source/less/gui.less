@@ -43,6 +43,15 @@
 
 @header-height: 228px;
 @header-fixed-height: 100px;
+@left-nav-width: 240px;
+
+.size-test {
+	&:before {
+		font-size: 24px;
+		font-weight: 300;
+		color: #fff;
+	}
+}
 
 
 body {
@@ -54,6 +63,23 @@ body {
 article, aside, footer, header, nav, section {
 	display: block;
 }
+
+.sidebar {  
+  left: -@left-nav-width;
+  width: @left-nav-width;
+  transition: left .2s cubic-bezier(.23, 1, .32, 1);
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  border-right: 1px solid @color-Border;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  padding: 0;
+  z-index: 81;
+}
+
+
 
 .header.fixed {	
   position: fixed;
@@ -79,11 +105,19 @@ article, aside, footer, header, nav, section {
   height: @header-height;
   top: 0;
   left: 0;
+	width: 100%;
   right: 0;
   z-index: 80;
-  width: 100%;
   background-color: @color-B;
-  transition: height 0s, padding .4s;
+  transition: padding .2s;
+}
+
+.container {
+	width: 100%;
+}
+
+.container.content-container {
+	max-width: 1200px;
 }
 
 .container-fluid {
@@ -92,7 +126,9 @@ article, aside, footer, header, nav, section {
 
 .main-content {
 	margin-top: @header-height;
+	margin-left: 0;
 	padding-top: 6px;
+	transition: margin 0.2s;
 }
 
 .main-content.scroll-top {
@@ -216,6 +252,7 @@ article, aside, footer, header, nav, section {
 .section-controls.fixed {
 	position: fixed;
 	top: 100px;
+	width: 100%;
 	background-color: #fff;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
 	hr {
@@ -258,23 +295,42 @@ article, aside, footer, header, nav, section {
 @media (min-width: @screen-lg) {
 	.size-test {
 		&:before {
-			content: 'Screen size: large';
+			content: 'SIZE: LG';
 		}
-	}		
+	}
+	.sidebar {
+		left: 0;
+	}
+	.header {
+		left: @left-nav-width;
+  	width: ~'calc(100% - 240px)';
+	}
+
+	.main-content {		
+		margin-left: @left-nav-width;
+	}
+
+	.section-controls.fixed {
+		width: ~'calc(100% - 240px)';
+	}
 }
 
 @media (min-width: @screen-md) and (max-width: (@screen-lg - 1)) {
 	.size-test {
 		&:before {
-			content: 'Screen size: medium';
+			content: 'SIZE: MD';
 		}
+	}
+	.header {
+		left: 0;
+		width: 100%;
 	}
 }
 
 @media (min-width: @screen-sm) and (max-width: (@screen-md - 1)) {
 	.size-test {
 		&:before {
-			content: 'Screen size: small';
+			content: 'SIZE: SM';
 		}
 	}
 
@@ -309,12 +365,12 @@ article, aside, footer, header, nav, section {
 @media (max-width: (@screen-sm - 1)) {
 	.size-test {
 		&:before {
-			content: 'Screen size: extra small';
+			content: 'SIZE: XS';
 		}
 	}
 
 	@header-height: 128px;
-	@header-fixed-height: 50px;
+	@header-fixed-height: 50px;	
 
 	.main-content {
 		margin-top: @header-height;

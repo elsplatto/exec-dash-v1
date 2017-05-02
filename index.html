@@ -16,7 +16,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 
-	<title>GUI example page</title>
+	<title>Executive Dashboard</title>
 
 
 	<script>
@@ -52,7 +52,10 @@
 
 
 	<div class="container-main">
-		<header class="header ">
+
+		<aside class="sidebar js-menu"></aside>
+
+		<header class="header">
 			<div class="container">
 				<div class="row">
 					<div class="headerline col-xs-8">		
@@ -62,6 +65,7 @@
 					</div>
 
 					<div class="headermode col-xs-4">
+						<span class="size-test" style="float: right;"></span>
 						<div class="headermode-links">
 							<a href="#">Operational</a>
 							<a href="#" class="active">Financial</a>
@@ -76,7 +80,7 @@
 		<main id="content" class="main-content">
 
 			<div id="sectionControls" class="section-controls">
-				<div class="container">
+				<div class="container content-container">
 					<div class="row">
 						<div class="col-xs-6">
 							<div class="btn-group arrows">
@@ -130,7 +134,7 @@
 
 			</div>
 
-			<div class="container">
+			<div class="container content-container">
 
 				<div class="row top-margin4-xs">
 					<div class="col-xs-12">
@@ -142,7 +146,6 @@
 					<div class="container-fluid dash-card-holder">
 
 						<div class="col-xs-4 card-main">
-							<!-- <p class="size-test"></p> -->
 
 							<div class="graph-header top-margin3-xs">
 							Westpac Group
@@ -253,25 +256,105 @@
 
 				<div class="row top-margin2-xs">
 					<div class="container-fluid dash-card-holder">
-						<div class="col-xs-3 card-main">
-						A graph would go in here...<br />
 
-						<div class="col-xs-2 card">
+						<div class="col-xs-4 card-main">
+
+							<div class="graph-header top-margin3-xs">
+							Westpac Group
+							</div>
+
+							<div class="headline-holder top-margin4-xs">
+								<span class="main-callout" id="roeHeroIndex"></span>
+								<span class="change-indicator icon icon-size-sm" id="roeHeroChangeIndicator" data-grunticon-embed></span>
+								<span class="change-text" id="roeHeroChangeText"></span>
+							</div>
+
+							<div class="ct-chart ct-golden-section standard-chart" id="roeWBGChart"></div>
+
 						</div>
 
 						<div class="col-xs-2 card">
+							<div class="graph-header top-margin3-xs">
+							CB
+							</div>
+
+							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
+								<span class="main-callout" id="roeCBIndex"></span>
+								<span class="change-indicator icon icon-size-sm" id="roeCBChangeIndicator" data-grunticon-embed></span>
+								<span class="change-text" id="roeCBChangeText"></span>
+							</div>
+
+							<div class="ct-chart ct-golden-section standard-chart" id="roeCBChart"></div>
 						</div>
 
 						<div class="col-xs-2 card">
+							<div class="graph-header top-margin3-xs">
+							BB
+							</div>
+
+							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
+								<span class="main-callout" id="roeBBIndex"></span>
+								<span class="change-indicator icon icon-size-sm" id="roeBBChangeIndicator" data-grunticon-embed></span>
+								<span class="change-text" id="roeBBChangeText"></span>
+							</div>
+
+							<div class="ct-chart ct-golden-section standard-chart" id="roeBBChart"></div>
 						</div>
 
 						<div class="col-xs-2 card">
+							<div class="graph-header top-margin3-xs">
+							WIB
+							</div>
+
+							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
+								<span class="main-callout" id="roeWIBIndex"></span>
+								<span class="change-indicator icon icon-size-sm" id="roeWIBChangeIndicator" data-grunticon-embed></span>
+								<span class="change-text" id="roeWIBChangeText"></span>
+							</div>
+
+							<div class="ct-chart ct-golden-section standard-chart" id="roeWIBChart"></div>
+						</div>
+
+						<div class="col-xs-2 card">
+							<div class="graph-header top-margin3-xs">
+							BT
+							</div>
+
+							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
+								<span class="main-callout" id="roeBTIndex"></span>
+								<span class="change-indicator icon icon-size-sm" id="roeBTChangeIndicator" data-grunticon-embed></span>
+								<span class="change-text" id="roeBTChangeText"></span>
+							</div>
+
+							<div class="ct-chart ct-golden-section standard-chart" id="roeBTChart"></div>
 						</div>
 						
 						<div class="col-xs-2 card">
+							<div class="graph-header top-margin3-xs">
+							WNZ
+							</div>
+
+							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
+								<span class="main-callout" id="roeWNZIndex"></span>
+								<span class="change-indicator icon icon-size-sm" id="roeWNZChangeIndicator" data-grunticon-embed></span>
+								<span class="change-text" id="roeWNZChangeText"></span>
+							</div>
+
+							<div class="ct-chart ct-golden-section standard-chart" id="roeWNZChart"></div>
 						</div>
 						
 						<div class="col-xs-2 card">
+							<div class="graph-header top-margin3-xs">
+							GBU
+							</div>
+
+							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
+								<span class="main-callout" id="roeGBUIndex"></span>
+								<span class="change-indicator icon icon-size-sm" id="roeGBUChangeIndicator" data-grunticon-embed></span>
+								<span class="change-text" id="roeGBUChangeText"></span>
+							</div>
+
+							<div class="ct-chart ct-golden-section standard-chart" id="roeGBUChart"></div>
 						</div>
 
 					</div>
@@ -286,26 +369,105 @@
 
 				<div class="row top-margin2-xs">
 					<div class="container-fluid dash-card-holder">
-						<div class="col-xs-3 card-main">
-						A graph would go in here...<br /><br /><br /><br /><br /><br /><br /><br />
+
+						<div class="col-xs-4 card-main">
+
+							<div class="graph-header top-margin3-xs">
+							Westpac Group
+							</div>
+
+							<div class="headline-holder top-margin4-xs">
+								<span class="main-callout" id="cashEarningsHeroIndex"></span>
+								<span class="change-indicator icon icon-size-sm" id="cashEarningsHeroChangeIndicator" data-grunticon-embed></span>
+								<span class="change-text" id="cashEarningsHeroChangeText"></span>
+							</div>
+
+							<div class="ct-chart ct-golden-section standard-chart" id="cashEarningsWBGChart"></div>
+
 						</div>
 
 						<div class="col-xs-2 card">
+							<div class="graph-header top-margin3-xs">
+							CB
+							</div>
+
+							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
+								<span class="main-callout" id="cashEarningsCBIndex"></span>
+								<span class="change-indicator icon icon-size-sm" id="cashEarningsCBChangeIndicator" data-grunticon-embed></span>
+								<span class="change-text" id="cashEarningsCBChangeText"></span>
+							</div>
+
+							<div class="ct-chart ct-golden-section standard-chart" id="cashEarningsCBChart"></div>
 						</div>
 
 						<div class="col-xs-2 card">
+							<div class="graph-header top-margin3-xs">
+							BB
+							</div>
+
+							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
+								<span class="main-callout" id="cashEarningsBBIndex"></span>
+								<span class="change-indicator icon icon-size-sm" id="cashEarningsBBChangeIndicator" data-grunticon-embed></span>
+								<span class="change-text" id="cashEarningsBBChangeText"></span>
+							</div>
+
+							<div class="ct-chart ct-golden-section standard-chart" id="cashEarningsBBChart"></div>
 						</div>
 
 						<div class="col-xs-2 card">
+							<div class="graph-header top-margin3-xs">
+							WIB
+							</div>
+
+							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
+								<span class="main-callout" id="cashEarningsWIBIndex"></span>
+								<span class="change-indicator icon icon-size-sm" id="cashEarningsWIBChangeIndicator" data-grunticon-embed></span>
+								<span class="change-text" id="cashEarningsWIBChangeText"></span>
+							</div>
+
+							<div class="ct-chart ct-golden-section standard-chart" id="cashEarningsWIBChart"></div>
 						</div>
 
 						<div class="col-xs-2 card">
+							<div class="graph-header top-margin3-xs">
+							BT
+							</div>
+
+							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
+								<span class="main-callout" id="cashEarningsBTIndex"></span>
+								<span class="change-indicator icon icon-size-sm" id="cashEarningsBTChangeIndicator" data-grunticon-embed></span>
+								<span class="change-text" id="cashEarningsBTChangeText"></span>
+							</div>
+
+							<div class="ct-chart ct-golden-section standard-chart" id="cashEarningsBTChart"></div>
 						</div>
 						
 						<div class="col-xs-2 card">
+							<div class="graph-header top-margin3-xs">
+							WNZ
+							</div>
+
+							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
+								<span class="main-callout" id="cashEarningsWNZIndex"></span>
+								<span class="change-indicator icon icon-size-sm" id="cashEarningsWNZChangeIndicator" data-grunticon-embed></span>
+								<span class="change-text" id="cashEarningsWNZChangeText"></span>
+							</div>
+
+							<div class="ct-chart ct-golden-section standard-chart" id="cashEarningsWNZChart"></div>
 						</div>
 						
 						<div class="col-xs-2 card">
+							<div class="graph-header top-margin3-xs">
+							GBU
+							</div>
+
+							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
+								<span class="main-callout" id="cashEarningsGBUIndex"></span>
+								<span class="change-indicator icon icon-size-sm" id="cashEarningsGBUChangeIndicator" data-grunticon-embed></span>
+								<span class="change-text" id="cashEarningsGBUChangeText"></span>
+							</div>
+
+							<div class="ct-chart ct-golden-section standard-chart" id="cashEarningsGBUChart"></div>
 						</div>
 
 					</div>
@@ -323,10 +485,9 @@
 
 	</div>
 
-	
-
-
 	<script src="assets/js/gui.min.js"></script>
+
+	<script src="assets/js/customs/index-charts.js"></script>
 
 	<script>		
 	$(function(){		
@@ -364,403 +525,9 @@
 
 		});
 
-		var basePointChange = 0;
+		
 
-
-		var marginHeroChart = new Chartist.Line('#marginWBGChart', {
-		  // Naming the series with the series object array notation
-  		labels: ['1', '2', '3', '4', '5', '6', '7', '8'],
-		  series: [{
-		    name: 'wbg',
-		    data: [-0.08, -0.4, 0, -0.2, 0.31, 0.75, 1, 1.02, 0.89, 1.02, 1.04, 1.09]
-		  }]
-		}, {
-		  fullWidth: true,
-		  height: '100%',
-		  // Within the series options you can use the series names
-		  // to specify configuration that will only be used for the
-		  // specific series.
-		  series: {		    
-		    'wbg': {
-		      showPoint: false
-		    }
-		  },
-		  axisX: {
-		    showGrid: false,
-		    showLabel: false,
-		    offset: 0
-		  },
-		  axisY: {
-		    showGrid: false,
-		    showLabel: false,
-		    offset: 0
-		  },
-		  chartPadding: 1
-
-		  // ,
-		  // plugins: [
-		  //   Chartist.plugins.ctThreshold({
-		  //     threshold: 1
-		  //   })
-		  // ]
-
-		}, [
-		  // You can even use responsive configuration overrides to
-		  // customize your series configuration even further!
-		  ['screen and (max-width: 320px)', {
-		    series: {
-		      'wbg': {
-		        lineSmooth: Chartist.Interpolation.none(),
-		        showPoint: true
-		      }
-		    }
-		  }]
-		]);
-
-		basePointChange = calculateBasePointChange(marginHeroChart);
-
-		$('#marginHeroIndex').text(getLastIndex(marginHeroChart));
-
-		$('#marginHeroChangeText').text(basePointChange + ' bps');
-
-		if (basePointChange > 0) {
-			$('#marginHeroChangeIndicator').addClass('symbol-triangle')
-		}
-		else if (basePointChange < 0) {
-			$('#marginHeroChangeIndicator').addClass('symbol-triangle dir-down')
-		}
-
-		// $('#marginHeroChangeText').text(Number(marginHeroChart.data.series[0].data[marginHeroChart.data.series[0].data.length-1] - marginHeroChart.data.series[0].data[marginHeroChart.data.series[0].data.length-2]) + ' bps');
-
-		var marginCBChart = new Chartist.Line('#marginCBChart', {
-		  // Naming the series with the series object array notation
-  		labels: ['1', '2', '3', '4', '5', '6', '7', '8'],
-		  series: [{
-		    name: 'cb',
-		    data: [0.08, 0.4, 0, -0.2, 0.31, 0.75, 1, 1.02, 0.89, 0.95, 0.94, 0.99]
-		  }]
-		}, {
-		  fullWidth: true,
-		  height: '60%',
-		  series: {		    
-		    'cb': {
-		      showPoint: false
-		    }
-		  },
-		  axisX: {
-		    showGrid: false,
-		    showLabel: false,
-		    offset: 0
-		  },
-		  axisY: {
-		    showGrid: false,
-		    showLabel: false,
-		    offset: 0
-		  },
-		  chartPadding: 1
-		}, [
-		  ['screen and (max-width: 320px)', {
-		    series: {
-		      'cb': {
-		        lineSmooth: Chartist.Interpolation.none(),
-		        showPoint: true
-		      }
-		    }
-		  }]
-		]);
-
-		basePointChange = calculateBasePointChange(marginCBChart);
-
-		$('#marginCBIndex').text(getLastIndex(marginCBChart));
-
-		$('#marginCBChangeText').text(basePointChange + ' bps');
-
-		if (basePointChange > 0) {
-			$('#marginCBChangeIndicator').addClass('symbol-triangle');
-		}
-		else if (basePointChange < 0) {
-			$('#marginCBChangeIndicator').addClass('symbol-triangle dir-down');
-		}
-
-		var marginBBChart = new Chartist.Line('#marginBBChart', {
-		  // Naming the series with the series object array notation
-  		labels: ['1', '2', '3', '4', '5', '6', '7', '8'],
-		  series: [{
-		    name: 'bb',
-		    data: [-0.7, -1, -0.5, -0.6, 2, 1, -0.05, -2, 0, 1.8, 0.4, 0.19]
-		  }]
-		}, {
-		  fullWidth: true,
-		  height: '60%',
-		  series: {		    
-		    'bb': {
-		      showPoint: false
-		    }
-		  },
-		  axisX: {
-		    showGrid: false,
-		    showLabel: false,
-		    offset: 0
-		  },
-		  axisY: {
-		    showGrid: false,
-		    showLabel: false,
-		    offset: 0
-		  },
-		  chartPadding: 1
-		}, [
-		  ['screen and (max-width: 320px)', {
-		    series: {
-		      'bb': {
-		        lineSmooth: Chartist.Interpolation.none(),
-		        showPoint: true
-		      }
-		    }
-		  }]
-		]);
-
-		basePointChange = calculateBasePointChange(marginBBChart);
-
-		$('#marginBBIndex').text(getLastIndex(marginBBChart));
-
-		$('#marginBBChangeText').text(basePointChange + ' bps');
-
-		if (basePointChange > 0) {
-			$('#marginBBChangeIndicator').addClass('symbol-triangle');
-		}
-		else if (basePointChange < 0) {
-			$('#marginBBChangeIndicator').addClass('symbol-triangle dir-down');
-		}
-
-		var marginWIBChart = new Chartist.Line('#marginWIBChart', {
-		  // Naming the series with the series object array notation
-  		labels: ['1', '2', '3', '4', '5', '6', '7', '8'],
-		  series: [{
-		    name: 'wib',
-		    data: [-0.7, -1, -0.5, -0.6, 2, 1, -0.05, -2, 0, 1.8, 0.4, 0.49]
-		  }]
-		}, {
-		  fullWidth: true,
-		  height: '60%',
-		  series: {		    
-		    'wib': {
-		      showPoint: false
-		    }
-		  },
-		  axisX: {
-		    showGrid: false,
-		    showLabel: false,
-		    offset: 0
-		  },
-		  axisY: {
-		    showGrid: false,
-		    showLabel: false,
-		    offset: 0
-		  },
-		  chartPadding: 1
-		}, [
-		  ['screen and (max-width: 320px)', {
-		    series: {
-		      'wib': {
-		        lineSmooth: Chartist.Interpolation.none(),
-		        showPoint: true
-		      }
-		    }
-		  }]
-		]);
-
-		basePointChange = calculateBasePointChange(marginWIBChart);
-
-		$('#marginWIBIndex').text(getLastIndex(marginWIBChart));
-
-		$('#marginWIBChangeText').text(basePointChange + ' bps');
-
-		if (basePointChange > 0) {
-			$('#marginWIBChangeIndicator').addClass('symbol-triangle');
-		}
-		else if (basePointChange < 0) {
-			$('#marginWIBChangeIndicator').addClass('symbol-triangle dir-down');
-		}
-
-		var marginBTChart = new Chartist.Line('#marginBTChart', {
-		  // Naming the series with the series object array notation
-  		labels: ['1', '2', '3', '4', '5', '6', '7', '8'],
-		  series: [{
-		    name: 'bt',
-		    data: [0.7, 1, -0.5, -0.6, 0, 0.6, -0.15, -0.3, 0, 1.28, 0.5, 0.32]
-		  }]
-		}, {
-		  fullWidth: true,
-		  height: '60%',
-		  series: {		    
-		    'bt': {
-		      showPoint: false
-		    }
-		  },
-		  axisX: {
-		    showGrid: false,
-		    showLabel: false,
-		    offset: 0
-		  },
-		  axisY: {
-		    showGrid: false,
-		    showLabel: false,
-		    offset: 0
-		  },
-		  chartPadding: 1
-		}, [
-		  ['screen and (max-width: 320px)', {
-		    series: {
-		      'bt': {
-		        lineSmooth: Chartist.Interpolation.none(),
-		        showPoint: true
-		      }
-		    }
-		  }]
-		]);
-
-		basePointChange = calculateBasePointChange(marginBTChart);
-
-		$('#marginBTIndex').text(getLastIndex(marginBTChart));
-
-		$('#marginBTChangeText').text(basePointChange + ' bps');
-
-		if (basePointChange > 0) {
-			$('#marginBTChangeIndicator').addClass('symbol-triangle');
-		}
-		else if (basePointChange < 0) {
-			$('#marginBTChangeIndicator').addClass('symbol-triangle dir-down');
-		}
-
-		var marginWNZChart = new Chartist.Line('#marginWNZChart', {
-		  // Naming the series with the series object array notation
-  		labels: ['1', '2', '3', '4', '5', '6', '7', '8'],
-		  series: [{
-		    name: 'wnz',
-		    data: [1.7, 1, -0.02, -0.6, 0, 0.6, -0.15, 0.3, 0, 0.28, 1.25, 1.32]
-		  }]
-		}, {
-		  fullWidth: true,
-		  height: '60%',
-		  series: {		    
-		    'wnz': {
-		      showPoint: false
-		    }
-		  },
-		  axisX: {
-		    showGrid: false,
-		    showLabel: false,
-		    offset: 0
-		  },
-		  axisY: {
-		    showGrid: false,
-		    showLabel: false,
-		    offset: 0
-		  },
-		  chartPadding: 1
-		}, [
-		  ['screen and (max-width: 320px)', {
-		    series: {
-		      'wnz': {
-		        lineSmooth: Chartist.Interpolation.none(),
-		        showPoint: true
-		      }
-		    }
-		  }]
-		]);
-
-		basePointChange = calculateBasePointChange(marginWNZChart);
-
-		$('#marginWNZIndex').text(getLastIndex(marginWNZChart));
-
-		$('#marginWNZChangeText').text(basePointChange + ' bps');
-
-		if (basePointChange > 0) {
-			$('#marginWNZChangeIndicator').addClass('symbol-triangle');
-		}
-		else if (basePointChange < 0) {
-			$('#marginWNZChangeIndicator').addClass('symbol-triangle dir-down');
-		}
-
-		var marginGBUChart = new Chartist.Line('#marginGBUChart', {
-		  // Naming the series with the series object array notation
-  		labels: ['1', '2', '3', '4', '5', '6', '7', '8'],
-		  series: [{
-		    name: 'gbu',
-		    data: [1.7, 1, -0.02, -0.6, 0, 0.16, -0.15, 0.3, 0, 0.28, 1.35, 1.39]
-		  }]
-		}, {
-		  fullWidth: true,
-		  height: '60%',
-		  series: {		    
-		    'gbu': {
-		      showPoint: false
-		    }
-		  },
-		  axisX: {
-		    showGrid: false,
-		    showLabel: false,
-		    offset: 0
-		  },
-		  axisY: {
-		    showGrid: false,
-		    showLabel: false,
-		    offset: 0
-		  },
-		  chartPadding: 1
-		}, [
-		  ['screen and (max-width: 320px)', {
-		    series: {
-		      'gbu': {
-		        lineSmooth: Chartist.Interpolation.none(),
-		        showPoint: true
-		      }
-		    }
-		  }]
-		]);
-
-		basePointChange = calculateBasePointChange(marginGBUChart);
-
-		$('#marginGBUIndex').text(getLastIndex(marginGBUChart));
-
-		$('#marginGBUChangeText').text(basePointChange + ' bps');
-
-		if (basePointChange > 0) {
-			$('#marginGBUChangeIndicator').addClass('symbol-triangle');
-		}
-		else if (basePointChange < 0) {
-			$('#marginGBUChangeIndicator').addClass('symbol-triangle dir-down');
-		}
-
-		function calculateBasePointChange(obj) {
-			var lastNumber = obj.data.series[0].data[obj.data.series[0].data.length-1];
-			var secondLastNumber = obj.data.series[0].data[obj.data.series[0].data.length-2];
-
-			return Math.round((lastNumber - secondLastNumber)*100);
-		}
-
-		function getLastIndex(obj) {
-			var lastNumber = obj.data.series[0].data[obj.data.series[0].data.length-1];
-			return lastNumber;
-		}
-
-		// var numberArr = [];
-		// for (var i = 0; i<30; i++) {
-		// 	// console.log(Math.floor((Math.random() * 60) + -30));
-		// 	// numberArr.push(Math.floor((Math.random() * 20) + -10));
-		// 	console.log(randomInRange(-2, 2))
-		// 	numberArr.push(randomInRange(-2, 2));
-		// }
-
-
-		// function randomInRange(min, max) {
-		//   var randomNum = Math.random() < 0.5 ? ((1-Math.random()) * (max-min) + min) : (Math.random() * (max-min) + min);
-
-		//   return Math.round(randomNum*100)/100;
-		// }
-
-		var arr = [1.2, 0.4, 1.8, 0, -2, -1.75, 1, 2, -0.6, -0.5, -1, -0.7];
-		console.log(arr.reverse())
+		
 
 	});
 	</script>

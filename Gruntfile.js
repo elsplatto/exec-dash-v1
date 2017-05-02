@@ -33,7 +33,6 @@
 var SETTINGS = function() {
 	return {
 		'folder': {
-			'node_mods': 'node_modules',
 			'js': 'source/js',
 			'less': 'source/less',
 			'svgs': 'source/svgs',
@@ -144,6 +143,7 @@ module.exports = function(grunt) {
 					'<%= SETTINGS.folder.prod %>/<%= SETTINGS.folder.assets %>/js/gui.min.js': [
 						'<%= SETTINGS.folder.js %>/*.js',
 						'!<%= SETTINGS.folder.js %>/*jquery*.js',
+						'!<%= SETTINGS.folder.js %>/customs/index-charts.js',
 					],
 				},
 			},
@@ -207,9 +207,9 @@ module.exports = function(grunt) {
 			},
 			js: {
 				files:[{
-					cwd: '<%= SETTINGS.folder.node_mods %>/d3/build/',
-					src: ['d3.min.js'],
-					dest: '<%= SETTINGS.folder.assets %>/js/d3',
+					cwd: '<%= SETTINGS.folder.js %>/customs/',
+					src: ['index-charts.js'],
+					dest: '<%= SETTINGS.folder.prod %>/<%= SETTINGS.folder.assets %>/js/customs',
 					filter: 'isFile',
 					expand: true,
 				}],
@@ -252,10 +252,11 @@ module.exports = function(grunt) {
 		watch: {
 			js: {
 				files: [
-					'<%= SETTINGS.folder.js %>/**/*.js',
+					'<%= SETTINGS.folder.js %>/**/*.js'
 				],
 				tasks: [
 					'_js',
+					'copy',
 					'wakeup',
 				],
 			},
@@ -311,6 +312,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('_js', [
 		'uglify',
+		'copy',
 		'concat:js',
 	]);
 
