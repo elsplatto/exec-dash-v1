@@ -53,15 +53,89 @@
 	}
 }
 
-
 body {
   font-family: "Helvetica Neue", "Roboto", Arial, sans-serif;
 	background-color: @color-I;
 }
 
-
 article, aside, footer, header, nav, section {
 	display: block;
+}
+
+textarea, input, button { outline: none; }
+
+.hamburger {
+	z-index: 100;
+	position: fixed;
+	// top: ~"calc(50% - 25px)";
+	top: 24px;
+	left: 12px;
+	display: inline-block;
+	padding: 12px 12px;
+	width: 50px;
+	height: 50px;
+	border-width: 0;
+	background-color: transparent;
+	-webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+	.icon-bar {
+		position: absolute;
+		display: block;
+    background-color: #fff;
+    width: 25px;
+    height: 0;
+    border: 1px solid #fff;
+    overflow: hidden;
+    text-indent: -99999em;
+    -webkit-transform: rotate(0deg);
+	  -moz-transform: rotate(0deg);
+	  -o-transform: rotate(0deg);
+	  transform: rotate(0deg);
+	  -webkit-transition: .25s ease-in-out;
+	  -moz-transition: .25s ease-in-out;
+	  -o-transition: .25s ease-in-out;
+	  transition: .25s ease-in-out;
+	}
+	.icon-bar:nth-child(1) {
+		top: 16px;
+	}
+	.icon-bar:nth-child(2) {
+		top: 24px;
+	}
+	.icon-bar:nth-child(3) {
+		top: 32px;
+	}
+}
+
+
+
+.hamburger.open {
+	.icon-bar:nth-child(1) {
+		-webkit-transform: rotate(45deg);
+	  -moz-transform: rotate(45deg);
+	  -o-transform: rotate(45deg);
+	  transform: rotate(45deg);
+	  background-color: @color-Text;
+	  border-color: @color-Text;
+	  top: 24px;
+	}
+	.icon-bar:nth-child(2) {
+		width: 0%;
+		opacity: 0;
+	  background-color: @color-Text;
+	  border-color: @color-Text;
+	}
+	.icon-bar:nth-child(3) {
+		-webkit-transform: rotate(-45deg);
+	  -moz-transform: rotate(-45deg);
+	  -o-transform: rotate(-45deg);
+	  transform: rotate(-45deg);
+	  background-color: @color-Text;
+	  border-color: @color-Text;
+	  top: 24px;
+	}
 }
 
 .sidebar {  
@@ -79,16 +153,16 @@ article, aside, footer, header, nav, section {
   z-index: 81;
 }
 
-
+.sidebar.open {
+	position: fixed;
+	left: 0px;
+}
 
 .header.fixed {	
   position: fixed;
   height: @header-fixed-height;
   .headerline {
 		height: @header-fixed-height;
-	}
-	.header-headline {
-	  font-size: 32px;
 	}
 	.headermode {
 		height: @header-fixed-height;
@@ -109,7 +183,8 @@ article, aside, footer, header, nav, section {
   right: 0;
   z-index: 80;
   background-color: @color-B;
-  transition: padding .2s;
+  transition: padding .2s; 
+
 }
 
 .container {
@@ -141,7 +216,7 @@ article, aside, footer, header, nav, section {
 
 .header-headline {
   position: absolute;
-  bottom: 24px;
+  bottom: 28px;
   margin: 0;
   font-weight: 300;
   font-size: 44px;
@@ -151,11 +226,16 @@ article, aside, footer, header, nav, section {
   color: #fff;
 }
 
+.header-headline.menued {	
+  font-size: 32px;
+  margin-left: 42px;
+}
+
 .headermode {
 	height: @header-height;
   .headermode-links {
 	  position: absolute;
-	  bottom: 30px;
+	  bottom: 36px;
 	  margin: 0;
 	  right: 12px;
 	  text-align: right;
@@ -313,6 +393,7 @@ article, aside, footer, header, nav, section {
 	.section-controls.fixed {
 		width: ~'calc(100% - 240px)';
 	}
+
 }
 
 @media (min-width: @screen-md) and (max-width: (@screen-lg - 1)) {
@@ -385,6 +466,11 @@ article, aside, footer, header, nav, section {
 		font-size: 22px;
 	}
 
+	.header-headline.menued {	
+	  font-size: 18px;
+	  margin-left: 42px;
+	}
+
 	.headerline {
 		height: @header-height;
 	}
@@ -393,10 +479,7 @@ article, aside, footer, header, nav, section {
 	  height: @header-fixed-height;
 	  .headerline {
 			height: @header-fixed-height;
-		}
-		.header-headline {
-		  font-size: 18px;
-		}		
+		}	
 		.headermode {
 			height: @header-fixed-height;
 			.headermode-links {
@@ -409,6 +492,23 @@ article, aside, footer, header, nav, section {
 
 	.header {
 	  height: @header-height;
+	  .hamburger {
+			top: 0;
+			left: 0;
+			width: 50px;
+			height: 50px;
+			.icon-bar {
+			}
+			.icon-bar:nth-child(1) {
+				top: 16px;
+			}
+			.icon-bar:nth-child(2) {
+				top: 24px;
+			}
+			.icon-bar:nth-child(3) {
+				top: 32px;
+			}
+		}
 	}
 
 	.header-headline {

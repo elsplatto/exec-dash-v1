@@ -53,19 +53,30 @@
 
 	<div class="container-main">
 
-		<aside class="sidebar js-menu"></aside>
+		<button class="hamburger hidden-lg" id="menuButton">
+			<span class="icon-bar">Toggle</span>
+			<span class="icon-bar">menu</span>
+			<span class="icon-bar">here</span>
+		</button>
+
+		<aside class="sidebar" id="leftNav"></aside>
 
 		<header class="header">
 			<div class="container">
+
+
 				<div class="row">
+
+
 					<div class="headerline col-xs-8">		
-						<h1 class="header-headline js-headerHeadline">
+
+						<h1 class="header-headline" id="bannerHeading">
 							<strong>Group</strong> Financial
 						</h1>
 					</div>
 
 					<div class="headermode col-xs-4">
-						<span class="size-test" style="float: right;"></span>
+						<!-- <span class="size-test" style="float: right;"></span> -->
 						<div class="headermode-links">
 							<a href="#">Operational</a>
 							<a href="#" class="active">Financial</a>
@@ -473,9 +484,6 @@
 					</div>
 				</div>
 
-
-				<br /><br /><br /><br /><br /><br />
-
 			</div>
 
 			<div class="container">
@@ -497,19 +505,41 @@
 		if (headerHeight < 150) {
 			scrollTarget = headerHeight - 50;
 		}
-		console.log('header height: ' + headerHeight);
-		console.log('scroll target: ' + scrollTarget);
 
 		$(window).resize(function(e) {
 			headerHeight = $('header').outerHeight();
+			// xs screen
 			if (headerHeight < 150) {
 				scrollTarget = headerHeight - 50;
 			}
-			console.log('header height: ' + headerHeight);
+			// console.log('header height: ' + headerHeight);
 		})
 
 		$(window).scroll(function(e){
 			console.log('scrolling:' + $(this).scrollTop());
+			// xs screen
+			if (headerHeight < 150)
+			{
+				if ($(this).scrollTop() > 40 && !$('#bannerHeading').hasClass('menued')) {
+					$('#bannerHeading').addClass('menued');
+				}
+				else if ($(this).scrollTop() < 40 && $('#bannerHeading').hasClass('menued'))
+				{
+					$('#bannerHeading').removeClass('menued');
+				}
+			}
+			else
+			{
+				if ($(this).scrollTop() > 70 && !$('#bannerHeading').hasClass('menued')) {
+					$('#bannerHeading').addClass('menued');
+				}
+				else if ($(this).scrollTop() < 70 && $('#bannerHeading').hasClass('menued'))
+				{
+					$('#bannerHeading').removeClass('menued');
+				}
+			}
+			
+
 			if ($(this).scrollTop() > scrollTarget && !$('header').hasClass('fixed')) {
 				console.log('[=======fix applied=======]');
 				$('header').addClass('fixed');
@@ -522,13 +552,24 @@
 				$('#sectionControls').removeClass('fixed');			
 				$('#content').removeClass('scroll-top');
 			}
-
 		});
 
-		
-
-		
-
+		$('#menuButton').click(function(e) {
+			// e.preventDefault();
+			if ($('#leftNav').hasClass('open'))
+			{
+				$('#leftNav').removeClass('open');
+				$(this).removeClass('open');
+				console.log('close nav');
+			}
+			else if (!$('leftNav').hasClass('open'))
+			{
+				$('#leftNav').addClass('open');
+				$(this).addClass('open');
+				console.log('open nav');
+			}
+			
+		})
 	});
 	</script>
 
