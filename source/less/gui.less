@@ -458,6 +458,24 @@ textarea, input, button { outline: none; }
 		padding-top: 6px;
 	}
 
+	.hamburger {
+		top: 0;
+		left: 0;
+		width: 50px;
+		height: 50px;
+		.icon-bar {
+		}
+		.icon-bar:nth-child(1) {
+			top: 16px;
+		}
+		.icon-bar:nth-child(2) {
+			top: 24px;
+		}
+		.icon-bar:nth-child(3) {
+			top: 32px;
+		}
+	}
+
 	.main-content.scroll-top {
 		padding-top: 80px;
 	}
@@ -492,23 +510,7 @@ textarea, input, button { outline: none; }
 
 	.header {
 	  height: @header-height;
-	  .hamburger {
-			top: 0;
-			left: 0;
-			width: 50px;
-			height: 50px;
-			.icon-bar {
-			}
-			.icon-bar:nth-child(1) {
-				top: 16px;
-			}
-			.icon-bar:nth-child(2) {
-				top: 24px;
-			}
-			.icon-bar:nth-child(3) {
-				top: 32px;
-			}
-		}
+	  
 	}
 
 	.header-headline {
