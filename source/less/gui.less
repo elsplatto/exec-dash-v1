@@ -65,7 +65,7 @@ article, aside, footer, header, nav, section {
 textarea, input, button { outline: none; }
 
 .hamburger {
-	z-index: 100;
+	z-index: 101;
 	position: fixed;
 	// top: ~"calc(50% - 25px)";
 	top: 24px;
@@ -109,7 +109,32 @@ textarea, input, button { outline: none; }
 	}
 }
 
+.no-scroll {
+	overflow: hidden;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	.main-content {
+		overflow: hidden;
+	}
+}
 
+.shade-overlay {
+	position: fixed;
+	z-index: 90;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.4);
+	display: none;	
+}
+
+.shade-overlay.show {
+	display: block;
+}
 
 .hamburger.open {
 	.icon-bar:nth-child(1) {
@@ -150,7 +175,62 @@ textarea, input, button { outline: none; }
   bottom: 0;
   background-color: #fff;
   padding: 0;
-  z-index: 81;
+  z-index: 100;
+  overflow-y: scroll;
+  .logo-header {
+  	width: @left-nav-width;
+  	background-color: #fff;
+  	position: fixed;
+  	height: @header-fixed-height;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	border-bottom: 1px solid @color-Border;
+  }
+  .nav-holder {
+  	margin-top: @header-fixed-height;
+  	padding: 24px;
+  	a {
+  		color: @color-Text;
+  		text-decoration: none;
+  	}
+  	.top {
+  		display: block;
+  	}
+  	.primary {
+  		font-weight: bold;
+  	}
+  	ul {
+  		margin: 0;
+  		padding: 0;
+  		list-style: none;
+  		width: 100%;
+  		overflow: hidden;
+  		li {
+  			padding: 9px 0;
+  			a {
+  				display: list-item;
+  			}
+  			ul {
+  				height: 0;  				
+  				margin-left: 12px;
+  				transition: height 0.2s ease-in-out;
+  				li {
+  					a {
+  						font-weight: 300;
+  					}
+  				}
+  			}
+  		}
+  	}
+  	ul {
+  		li.open {
+  			ul {
+  				height: auto;
+  			}
+  		}
+  	}
+  }
 }
 
 .sidebar.open {
@@ -533,7 +613,18 @@ textarea, input, button { outline: none; }
 	  }  
 	}
 
-
+	.sidebar {
+		.logo-header{
+	  	height: @header-fixed-height;
+	  	display: flex;
+	  	align-items: center;
+	  	justify-content: center;
+	  	border-bottom: 1px solid @color-Border;
+	  }
+	  .nav-holder {
+	  	margin-top: @header-fixed-height;
+	  }
+	}
 
 	.section-controls.fixed {
 		top: @header-fixed-height;

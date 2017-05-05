@@ -59,22 +59,85 @@
 			<span class="icon-bar">here</span>
 		</button>
 
-		<aside class="sidebar" id="leftNav"></aside>
+		<aside class="sidebar" id="leftNav">
+			<div class="logo-header">
+				<span class="logo-wbg logo hidden-md hidden-sm hidden-xs"></span>
+				<span class="logo-wbc logo hidden-lg"></span>
+			</div>
+
+			<div class="nav-holder">
+				<a href="#" class="primary bottom-margin4-xs top">Westpac Group</a>
+				
+
+				<ul>
+					<li><a href="#" class="primary">Consumer Bank</a>
+						<ul>
+							<li><a href="#">WBC Retail</a></li>
+							<li><a href="#">St George Retail</a></li>
+							<li><a href="#">Bank of Melbourne</a></li>
+							<li><a href="#">Bank SA</a></li>
+							<li><a href="#"RAMS</a></li>
+						</ul>
+					</li>
+					<li class="primary"><a href="#">Business Week</a>
+						<ul>
+							<li><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+						</ul>
+					</li>
+					<li class="primary"><a href="#">BT</a>						
+						<ul>
+							<li><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+						</ul>
+					</li>
+					<li class="primary"><a href="#">Westpac Institutional Banking</a>						
+						<ul>
+							<li><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+						</ul>
+					</li>
+					<li class="primary"><a href="#">Westpac NZ</a>						
+						<ul>
+							<li><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+						</ul>
+					</li>
+					<li class="primary"><a href="#">Group Division</a>						
+						<ul>
+							<li><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</aside>
+
+		<div class="shade-overlay" id="shadeOverlay"></div>
 
 		<header class="header">
 			<div class="container">
-
-
 				<div class="row">
-
-
-					<div class="headerline col-xs-8">		
-
+					<div class="headerline col-xs-8">
 						<h1 class="header-headline" id="bannerHeading">
 							<strong>Group</strong> Financial
 						</h1>
 					</div>
-
 					<div class="headermode col-xs-4">
 						<!-- <span class="size-test" style="float: right;"></span> -->
 						<div class="headermode-links">
@@ -82,14 +145,12 @@
 							<a href="#" class="active">Financial</a>
 						</div>
 					</div>
-
 				</div>
 			</div>
 		</header>
 
 
 		<main id="content" class="main-content">
-
 			<div id="sectionControls" class="section-controls">
 				<div class="container content-container">
 					<div class="row">
@@ -137,9 +198,7 @@
 								</label>
 							</div>
 						</div>
-
 					</div>
-
 					<hr />
 				</div>
 
@@ -155,28 +214,22 @@
 
 				<div class="row top-margin2-xs">
 					<div class="container-fluid dash-card-holder">
-
 						<div class="col-xs-4 card-main">
-
 							<div class="graph-header top-margin3-xs">
 							Westpac Group
 							</div>
-
 							<div class="headline-holder top-margin4-xs">
 								<span class="main-callout" id="marginHeroIndex"></span>
 								<span class="change-indicator icon icon-size-sm" id="marginHeroChangeIndicator" data-grunticon-embed></span>
 								<span class="change-text" id="marginHeroChangeText"></span>
 							</div>
-
 							<div class="ct-chart ct-golden-section standard-chart" id="marginWBGChart"></div>
-
 						</div>
 
 						<div class="col-xs-2 card">
 							<div class="graph-header top-margin3-xs">
 							CB
 							</div>
-
 							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
 								<span class="main-callout" id="marginCBIndex"></span>
 								<span class="change-indicator icon icon-size-sm" id="marginCBChangeIndicator" data-grunticon-embed></span>
@@ -555,21 +608,41 @@
 		});
 
 		$('#menuButton').click(function(e) {
-			// e.preventDefault();
+			e.preventDefault();
 			if ($('#leftNav').hasClass('open'))
 			{
-				$('#leftNav').removeClass('open');
-				$(this).removeClass('open');
-				console.log('close nav');
+				closeMenu();
+				$('#shadeOverlay').off('click', function(e) {
+					closeMenu();
+				});
 			}
 			else if (!$('leftNav').hasClass('open'))
 			{
-				$('#leftNav').addClass('open');
-				$(this).addClass('open');
-				console.log('open nav');
-			}
-			
+				openMenu();				
+				$('#shadeOverlay').on('click', function(e) {
+					closeMenu();
+				});
+			}			
+		});
+
+		$('li').on('click', function(e) {
+			// var parent = $(this).nearest('li').toggleClass('open');
+			$(this).toggleClass('open')
 		})
+
+		function openMenu() {
+			$('#leftNav').addClass('open');
+			$('#menuButton').addClass('open');
+			$('body').addClass('no-scroll');
+			$('#shadeOverlay').addClass('show');
+		}
+
+		function closeMenu() {
+			$('#leftNav').removeClass('open');
+			$('#menuButton').removeClass('open');
+			$('body').removeClass('no-scroll');
+			$('#shadeOverlay').removeClass('show');
+		}
 	});
 	</script>
 
