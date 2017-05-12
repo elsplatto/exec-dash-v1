@@ -141,8 +141,8 @@
 					<div class="headermode col-xs-4">
 						<!-- <span class="size-test" style="float: right;"></span> -->
 						<div class="headermode-links">
-							<a href="#" class="js-data-link active" data-file="dashboard-financial-strength-data.json">Financial</a>
-							<a href="#" class="js-data-link" data-file="dashboard-operational-data.json">Operational</a>
+							<a href="#" class="js-data-link active" data-footer="financialFooterMetrics" data-file="dashboard-financial-strength-data.json">Financial</a>
+							<a href="#" class="js-data-link" data-footer="operationalFooterMetrics" data-file="dashboard-operational-new-customer-data.json">Operational</a>
 						</div>
 					</div>
 				</div>
@@ -209,7 +209,7 @@
 		</main>
 
 		<div class="footer-nav">
-			<div class="container">
+			<div class="container active" id="financialFooterMetrics">
 				<div class="footer-metric-header">Financial Metrics<span class="icon icon-size-sm symbol-triangle"></span></div>
 				<ul>
 					<li><a href="#" data-file="dashboard-financial-strength-data.json" class="js-data-link active">Strength</a></li>
@@ -217,6 +217,16 @@
 					<li><a href="#" data-file="dashboard-financial-productivity-data.json" class="js-data-link">Productivity</a></li>
 					<li><a href="#" data-file="dashboard-financial-growth-data.json" class="js-data-link">Growth</a></li>
 					<li><a href="#" data-file="dashboard-financial-detail-data.json" class="js-data-link">Detailed Reports</a></li>
+				</ul>
+			</div>
+			<div class="container" id="operationalFooterMetrics">
+				<div class="footer-metric-header">Operational Metrics<span class="icon icon-size-sm symbol-triangle"></span></div>
+				<ul>
+					<li><a href="#" data-file="dashboard-operational-new-customer-data.json" class="js-data-link active">New Customers</a></li>
+					<li><a href="#" data-file="dashboard-operational-depth-data.json" class="js-data-link">Depth of Relationship</a></li>
+					<li><a href="#" data-file="dashboard-operational-retention-data.json" class="js-data-link">Customer Retention</a></li>
+					<li><a href="#" data-file="dashboard-operational-serve-data.json" class="js-data-link">Cost to Serve</a></li>
+					<li><a href="#" data-file="dashboard-operational-quality-data.json" class="js-data-link">Service Quality</a></li>
 				</ul>
 			</div>
 		</div>
@@ -247,10 +257,14 @@
 		$('.js-data-link').on('click', function(e) {
 			e.preventDefault();
 
+			var footerTarget = $(this).attr('data-footer');
+			if (footerTarget) {
+				$('.footer-nav .container.active').removeClass('active');
+				$('#' + footerTarget).addClass('active')
+			}
+
 			var parentEl = $(this).closest('div');
-			console.dir(parentEl);
 			parentEl.find('.js-data-link.active').removeClass('active');
-			console.dir($(this))
 			$(this).addClass('active');
 			dataFile = dataBasePath + $(this).attr('data-file');
 			fetchDataFile(dataFile);
@@ -358,10 +372,8 @@
 		var headerHeight = $('header').outerHeight();
 		var scrollTarget = headerHeight - 100;
 		if (headerHeight < 150) {
-			scrollTarget = headerHeight - 50;
-			
+			scrollTarget = headerHeight - 50;			
 		}
-
 
 		$('.footer-metric-header').click(function() {
 			$(this).closest('.footer-nav').toggleClass('up')
@@ -373,11 +385,9 @@
 			if (headerHeight < 150) {
 				scrollTarget = headerHeight - 50;
 			}
-			// console.log('header height: ' + headerHeight);
-		})
+		});
 
-		$(window).scroll(function(e){
-			// console.log('scrolling:' + $(this).scrollTop());
+		$(window).scroll(function(e) {
 			// xs screen
 			if (headerHeight < 150)
 			{
@@ -398,8 +408,7 @@
 				{
 					$('#bannerHeading').removeClass('menued');
 				}
-			}
-			
+			}			
 
 			if ($(this).scrollTop() > scrollTarget && !$('header').hasClass('fixed')) {
 				// console.log('[=======fix applied=======]');

@@ -492,6 +492,12 @@ textarea, input, button { outline: none; }
 	height: auto;
 	background-color: #fff;
 	border-top: 1px solid @color-Border;
+	.container {
+		display: none;
+	}
+	.container.active {
+		display: block
+	}
 	.footer-metric-header {
 		color: @color-G;
 		font-weight: 500;
@@ -499,6 +505,7 @@ textarea, input, button { outline: none; }
 		margin-right: 30px;
 		padding: 18px 0;
 		float: left;
+		font-size: 18px;
 		span {
 			display: none;
 		}
@@ -509,7 +516,7 @@ textarea, input, button { outline: none; }
 		padding: 0;
 		li {
 			float: left;
-			margin-right: 18px;
+			margin-right: 24px;
 			padding: 0;
 			display: list-item;
 		 	a {
@@ -517,6 +524,8 @@ textarea, input, button { outline: none; }
 		 		color: @color-G;
 		 		text-decoration: none;
 				padding: 18px 0;
+				font-size: 18px;
+				font-weight: 300;
 		 	}
 		 	a.active {
 		 		border-bottom: 2px solid @color-Warning;

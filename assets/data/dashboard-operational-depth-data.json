@@ -1,0 +1,898 @@
+{
+  "dashboardMetrics":
+  [{
+    "metrics": 
+    [{
+      "title": "Depth of Relationship",
+      "data": 
+      [{
+        "title": "Term Deposits (bps)",
+        "row": 
+        [{
+          "id": 1, 
+          "name": "wbg",
+          "longTitle": "Westpac Banking Group",
+          "title": "Westpac Group",
+          "type": "Hero",
+          "chartType": "Bar",
+          "category": "Margin",
+          "cardId": "marginHeroCard",
+          "class": "card-main",
+          "calloutElementId": "marginHeroIndex",
+          "indicatorElementId": "marginHeroChangeIndicator",
+          "changeTextElementId": "marginHeroChangeText",
+          "chartElementId": "marginWBGChart",
+          "data": [{
+            "labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
+            "series": [{
+              "name": "wbg",
+              "data": [-0.08, -0.4, 0, -0.2, 0.31, 0.75, 1, 1.02, 0.89, 1.02, 1.04, 1.09]
+            }]
+          }], 
+          "chartOptions": [{
+            "fullWidth": true,
+            "height": "100%",
+            "series": {       
+              "wbg": {
+                "showPoint": false
+              }
+            },
+            "axisX": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "axisY": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "chartPadding": 1
+          }]
+        },
+        {
+          "id": 2, 
+          "name": "cb",
+          "longTitle": "Consumer Banking",
+          "title": "CB",
+          "type": "Standard",          
+          "chartType": "Line",
+          "category": "Margin",
+          "cardId": "marginCBCard",
+          "class": "card",
+          "calloutElementId": "marginCBIndex",
+          "indicatorElementId": "marginCBChangeIndicator",
+          "changeTextElementId": "marginCBChangeText",
+          "chartElementId": "marginCBChart",
+          "data": [{
+            "labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
+            "series": [{
+              "name": "cb",
+              "data": [-0.08, -0.4, 0, -0.2, 0.31, 0.75, 1, 1.02, 0.89, 1.02, 1.04, 1.09]
+            }]
+          }], 
+          "chartOptions":[{
+            "fullWidth": true,
+            "height": "100%",
+            "series": {       
+              "cb": {
+                "showPoint": false
+              }
+            },
+            "axisX": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "axisY": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "chartPadding": 1
+          }]
+        },
+        {
+          "id": 3, 
+          "name": "bb",
+          "longTitle": "Busines Banking",
+          "title": "BB",
+          "type": "Standard",
+          "chartType": "Line",
+          "category": "Margin",
+          "cardId": "marginBBCard",
+          "class": "card",
+          "calloutElementId": "marginBBIndex",
+          "indicatorElementId": "marginBBChangeIndicator",
+          "changeTextElementId": "marginBBChangeText",
+          "chartElementId": "marginBBChart",
+          "data": [{
+            "labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
+            "series": [{
+              "name": "cb",
+              "data": [-0.7, -1, -0.5, -0.6, 2, 1, -0.05, -2, 0, 1.8, 0.4, 0.19]
+            }]
+          }], 
+          "chartOptions":[{
+            "fullWidth": true,
+            "height": "100%",
+            "series": {       
+              "cb": {
+                "showPoint": false
+              }
+            },
+            "axisX": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "axisY": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "chartPadding": 1
+          }]
+        },
+        {
+          "id": 4, 
+          "name": "wib",
+          "longTitle": "Westpac Institutional Banking",
+          "title": "WIB",
+          "type": "Standard",
+          "chartType": "Line",
+          "category": "Margin",
+          "cardId": "marginWIBCard",
+          "class": "card",
+          "calloutElementId": "marginWIBIndex",
+          "indicatorElementId": "marginWIBChangeIndicator",
+          "changeTextElementId": "marginWIBChangeText",
+          "chartElementId": "marginWIBChart",
+          "data": [{
+            "labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
+            "series": [{
+              "name": "wib",
+              "data": [-0.7, -1, -0.5, -0.6, 2, 1, -0.05, -2, 0, 1.8, 0.4, 0.49]
+            }]
+          }],
+          "chartOptions":[{
+            "fullWidth": true,
+            "height": "60%",
+            "series": {       
+              "wib": {
+                "showPoint": false
+              }
+            },
+            "axisX": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "axisY": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "chartPadding": 1
+          }]
+        },
+        {
+          "id": 5, 
+          "name": "bt",
+          "longTitle": "Bankers Trust",
+          "title": "BT",
+          "type": "Standard",
+          "chartType": "Line",
+          "category": "Margin",
+          "cardId": "marginBTCard",
+          "class": "card",
+          "calloutElementId": "marginBTIndex",
+          "indicatorElementId": "marginBTChangeIndicator",
+          "changeTextElementId": "marginBTChangeText",
+          "chartElementId": "marginBTChart",
+          "data": [{
+            "labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
+            "series": [{
+              "name": "bt",
+              "data": [0.7, 1, -0.5, -0.6, 0, 0.6, -0.15, -0.3, 0, 1.28, 0.5, 0.32]
+            }]
+          }],
+          "chartOptions":[{
+            "fullWidth": true,
+            "height": "60%",
+            "series": {       
+              "bt": {
+                "showPoint": false
+              }
+            },
+            "axisX": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "axisY": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "chartPadding": 1
+          }]
+        },
+        {
+          "id": 6, 
+          "name": "wnz",
+          "longTitle": "Westpac New Zealand",
+          "title": "WNZ",
+          "type": "Standard",
+          "chartType": "Line",
+          "category": "Margin",
+          "cardId": "marginWNZCard",
+          "class": "card",
+          "calloutElementId": "marginWNZIndex",
+          "indicatorElementId": "marginWNZChangeIndicator",
+          "changeTextElementId": "marginWNZChangeText",
+          "chartElementId": "marginWNZChart",
+          "data": [{
+            "labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
+            "series": [{
+              "name": "WNZ",
+              "data": [1.7, 1, -0.02, -0.6, 0, 0.6, -0.15, 0.3, 0, 0.28, 1.25, 1.32]
+            }]
+          }],
+          "chartOptions":[{
+            "fullWidth": true,
+            "height": "60%",
+            "series": {       
+              "WNZ": {
+                "showPoint": false
+              }
+            },
+            "axisX": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "axisY": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "chartPadding": 1
+          }]
+        },
+        {
+          "id": 7, 
+          "name": "gbu",
+          "longTitle": "GBU",
+          "title": "GBU",
+          "type": "Standard",
+          "chartType": "Line",
+          "category": "Margin",
+          "cardId": "marginGBUCard",
+          "class": "card",
+          "calloutElementId": "marginGBUIndex",
+          "indicatorElementId": "marginGBUChangeIndicator",
+          "changeTextElementId": "marginGBUChangeText",
+          "chartElementId": "marginGBUChart",
+          "data": [{
+            "labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
+            "series": [{
+              "name": "GBU",
+              "data": [1.7, 1, -0.02, -0.6, 0, 0.16, -0.15, 0.3, 0, 0.28, 1.35, 1.39]
+            }]
+          }],
+          "chartOptions":[{
+            "fullWidth": true,
+            "height": "60%",
+            "series": {       
+              "GBU": {
+                "showPoint": false
+              }
+            },
+            "axisX": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "axisY": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "chartPadding": 1
+          }]
+        }]
+      },
+      {
+        "title": "ROE (%)",
+        "row":
+        [{
+          "id": 8, 
+          "name": "wbg",
+          "longTitle": "Westpac Banking Group",
+          "title": "Westpac Group",
+          "type": "Hero",
+          "chartType": "Line",
+          "category":  "ROE",
+          "cardId": "roeHeroCard",
+          "class": "card-main",
+          "calloutElementId": "roeHeroIndex",
+          "indicatorElementId": "roeHeroChangeIndicator",
+          "changeTextElementId": "roeHeroChangeText",
+          "chartElementId": "roeWBGChart",
+          "data": [{
+            "labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
+            "series": [{
+              "name": "wbg",
+              "data": [-0.08, -0.4, 0, -0.2, 0.31, 0.75, 1, 1.02, 0.89, 1.02, 1.04, 1.09]
+            }]
+          }], 
+          "chartOptions":[{
+            "fullWidth": true,
+            "height": "100%",
+            "series": {       
+              "wbg": {
+                "showPoint": false
+              }
+            },
+            "axisX": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "axisY": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "chartPadding": 1
+          }]
+        },
+        {
+          "id": 9, 
+          "name": "cb",
+          "longTitle": "Consumer Banking",
+          "title": "CB",
+          "type": "Standard",
+          "chartType": "Line",
+          "category":  "ROE",
+          "cardId": "roeCBCard",
+          "class": "card",
+          "calloutElementId": "roeCBIndex",
+          "indicatorElementId": "roeCBChangeIndicator",
+          "changeTextElementId": "roeCBChangeText",
+          "chartElementId": "roeCBChart",
+          "data": [{
+            "labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
+            "series": [{
+              "name": "cb",
+              "data": [-0.08, -0.4, 0, -0.2, 0.31, 0.75, 1, 1.02, 0.89, 1.02, 1.04, 1.09]
+            }]
+          }], 
+          "chartOptions":[{
+            "fullWidth": true,
+            "height": "100%",
+            "series": {       
+              "cb": {
+                "showPoint": false
+              }
+            },
+            "axisX": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "axisY": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "chartPadding": 1
+          }]
+        },
+        {
+          "id": 10, 
+          "name": "bb",
+          "longTitle": "Busines Banking",
+          "title": "BB",
+          "type": "Standard",
+          "chartType": "Line",
+          "category":  "ROE",
+          "cardId": "roeBBCard",
+          "class": "card",
+          "calloutElementId": "roeBBIndex",
+          "indicatorElementId": "roeBBChangeIndicator",
+          "changeTextElementId": "roeBBChangeText",
+          "chartElementId": "roeBBChart",
+          "data": [{
+            "labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
+            "series": [{
+              "name": "cb",
+              "data": [-0.7, -1, -0.5, -0.6, 2, 1, -0.05, -2, 0, 1.8, 0.4, 0.19]
+            }]
+          }], 
+          "chartOptions":[{
+            "fullWidth": true,
+            "height": "100%",
+            "series": {       
+              "cb": {
+                "showPoint": false
+              }
+            },
+            "axisX": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "axisY": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "chartPadding": 1
+          }]
+        },
+        {
+          "id": 11, 
+          "name": "wib",
+          "longTitle": "Westpac Institutional Banking",
+          "title": "WIB",
+          "type": "Standard",
+          "chartType": "Line",
+          "category":  "ROE",
+          "cardId": "roeWIBCard",
+          "class": "card",
+          "calloutElementId": "roeWIBIndex",
+          "indicatorElementId": "roeWIBChangeIndicator",
+          "changeTextElementId": "roeWIBChangeText",
+          "chartElementId": "roeWIBChart",
+          "data": [{
+            "labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
+            "series": [{
+              "name": "wib",
+              "data": [-0.7, -1, -0.5, -0.6, 2, 1, -0.05, -2, 0, 1.8, 0.4, 0.49]
+            }]
+          }],
+          "chartOptions":[{
+            "fullWidth": true,
+            "height": "60%",
+            "series": {       
+              "wib": {
+                "showPoint": false
+              }
+            },
+            "axisX": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "axisY": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "chartPadding": 1
+          }]
+        },
+        {
+          "id": 12, 
+          "name": "bt",
+          "longTitle": "Bankers Trust",
+          "title": "BT",
+          "type": "Standard",
+          "chartType": "Line",
+          "category":  "ROE",
+          "cardId": "roeBTCard",
+          "class": "card",
+          "calloutElementId": "roeBTIndex",
+          "indicatorElementId": "roeBTChangeIndicator",
+          "changeTextElementId": "roeBTChangeText",
+          "chartElementId": "roeBTChart",
+          "data": [{
+            "labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
+            "series": [{
+              "name": "bt",
+              "data": [0.7, 1, -0.5, -0.6, 0, 0.6, -0.15, -0.3, 0, 1.28, 0.5, 0.32]
+            }]
+          }],
+          "chartOptions":[{
+            "fullWidth": true,
+            "height": "60%",
+            "series": {       
+              "bt": {
+                "showPoint": false
+              }
+            },
+            "axisX": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "axisY": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "chartPadding": 1
+          }]
+        },
+        {
+          "id": 13, 
+          "name": "wnz",
+          "longTitle": "Westpac New Zealand",
+          "title": "WNZ",
+          "type": "Standard",
+          "chartType": "Line",
+          "category":  "ROE",
+          "cardId": "roeWNZCard",
+          "class": "card",
+          "calloutElementId": "roeWNZIndex",
+          "indicatorElementId": "roeWNZChangeIndicator",
+          "changeTextElementId": "roeWNZChangeText",
+          "chartElementId": "roeWNZChart",
+          "data": [{
+            "labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
+            "series": [{
+              "name": "WNZ",
+              "data": [1.7, 1, -0.02, -0.6, 0, 0.6, -0.15, 0.3, 0, 0.28, 1.25, 1.32]
+            }]
+          }],
+          "chartOptions":[{
+            "fullWidth": true,
+            "height": "60%",
+            "series": {       
+              "WNZ": {
+                "showPoint": false
+              }
+            },
+            "axisX": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "axisY": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "chartPadding": 1
+          }]
+        },
+        {
+          "id": 14, 
+          "name": "gbu",
+          "longTitle": "GBU",
+          "title": "GBU",
+          "type": "Standard",
+          "chartType": "Line",
+          "category":  "ROE",
+          "cardId": "roeGBUCard",
+          "class": "card",
+          "calloutElementId": "roeGBUIndex",
+          "indicatorElementId": "roeGBUChangeIndicator",
+          "changeTextElementId": "roeGBUChangeText",
+          "chartElementId": "roeGBUChart",
+          "data": [{
+            "labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
+            "series": [{
+              "name": "GBU",
+              "data": [1.7, 1, -0.02, -0.6, 0, 0.16, -0.15, 0.3, 0, 0.28, 1.35, 1.39]
+            }]
+          }],
+          "chartOptions":[{
+            "fullWidth": true,
+            "height": "60%",
+            "series": {       
+              "GBU": {
+                "showPoint": false
+              }
+            },
+            "axisX": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "axisY": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "chartPadding": 1
+          }]
+        }]
+      },
+      {
+        "title": "Cash Earnings (%)",
+        "row":
+        [{
+          "id": 15, 
+          "name": "wbg",
+          "longTitle": "Westpac Banking Group",
+          "title": "Westpac Group",
+          "type": "Hero",
+          "chartType": "Line",
+          "category":  "Cash Earnings",
+          "cardId": "cashEarningsHeroCard",
+          "class": "card-main",
+          "calloutElementId": "cashEarningsHeroIndex",
+          "indicatorElementId": "cashEarningsHeroChangeIndicator",
+          "changeTextElementId": "cashEarningsHeroChangeText",
+          "chartElementId": "cashEarningsWBGChart",
+          "data": [{
+            "labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
+            "series": [{
+              "name": "wbg",
+              "data": [-0.08, -0.4, 0, -0.2, 0.31, 0.75, 1, 1.02, 0.89, 1.02, 1.04, 1.09]
+            }]
+          }], 
+          "chartOptions":[{
+            "fullWidth": true,
+            "height": "100%",
+            "series": {       
+              "wbg": {
+                "showPoint": false
+              }
+            },
+            "axisX": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "axisY": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "chartPadding": 1
+          }]
+        },
+        {
+          "id": 16, 
+          "name": "cb",
+          "longTitle": "Consumer Banking",
+          "title": "CB",
+          "type": "Standard",
+          "chartType": "Line",
+          "category":  "Cash Earnings",
+          "class": "card",
+          "calloutElementId": "cashEarningsCBIndex",
+          "indicatorElementId": "cashEarningsCBChangeIndicator",
+          "changeTextElementId": "cashEarningsCBChangeText",
+          "chartElementId": "cashEarningsCBChart",
+          "data": [{
+            "labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
+            "series": [{
+              "name": "cb",
+              "data": [-0.08, -0.4, 0, -0.2, 0.31, 0.75, 1, 1.02, 0.89, 1.02, 1.04, 1.09]
+            }]
+          }], 
+          "chartOptions":[{
+            "fullWidth": true,
+            "height": "100%",
+            "series": {       
+              "cb": {
+                "showPoint": false
+              }
+            },
+            "axisX": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "axisY": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "chartPadding": 1
+          }]
+        },
+        {
+          "id": 17, 
+          "name": "bb",
+          "longTitle": "Busines Banking",
+          "title": "BB",
+          "type": "Standard",
+          "chartType": "Line",
+          "category":  "Cash Earnings",
+          "class": "card",
+          "calloutElementId": "cashEarningsBBIndex",
+          "indicatorElementId": "cashEarningsBBChangeIndicator",
+          "changeTextElementId": "cashEarningsBBChangeText",
+          "chartElementId": "cashEarningsBBChart",
+          "data": [{
+            "labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
+            "series": [{
+              "name": "cb",
+              "data": [-0.7, -1, -0.5, -0.6, 2, 1, -0.05, -2, 0, 1.8, 0.4, 0.19]
+            }]
+          }], 
+          "chartOptions":[{
+            "fullWidth": true,
+            "height": "100%",
+            "series": {       
+              "cb": {
+                "showPoint": false
+              }
+            },
+            "axisX": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "axisY": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "chartPadding": 1
+          }]
+        },
+        {
+          "id": 18, 
+          "name": "wib",
+          "longTitle": "Westpac Institutional Banking",
+          "title": "WIB",
+          "type": "Standard",
+          "chartType": "Line",
+          "category":  "Cash Earnings",
+          "class": "card",
+          "calloutElementId": "cashEarningsWIBIndex",
+          "indicatorElementId": "cashEarningsWIBChangeIndicator",
+          "changeTextElementId": "cashEarningsWIBChangeText",
+          "chartElementId": "cashEarningsWIBChart",
+          "data": [{
+            "labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
+            "series": [{
+              "name": "wib",
+              "data": [-0.7, -1, -0.5, -0.6, 2, 1, -0.05, -2, 0, 1.8, 0.4, 0.49]
+            }]
+          }],
+          "chartOptions":[{
+            "fullWidth": true,
+            "height": "60%",
+            "series": {       
+              "wib": {
+                "showPoint": false
+              }
+            },
+            "axisX": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "axisY": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "chartPadding": 1
+          }]
+        },
+        {
+          "id": 19, 
+          "name": "bt",
+          "longTitle": "Bankers Trust",
+          "title": "BT",
+          "type": "Standard",
+          "chartType": "Line",
+          "category":  "Cash Earnings",
+          "class": "card",
+          "calloutElementId": "cashEarningsBTIndex",
+          "indicatorElementId": "cashEarningsBTChangeIndicator",
+          "changeTextElementId": "cashEarningsBTChangeText",
+          "chartElementId": "cashEarningsBTChart",
+          "data": [{
+            "labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
+            "series": [{
+              "name": "bt",
+              "data": [0.7, 1, -0.5, -0.6, 0, 0.6, -0.15, -0.3, 0, 1.28, 0.5, 0.32]
+            }]
+          }],
+          "chartOptions":[{
+            "fullWidth": true,
+            "height": "60%",
+            "series": {       
+              "bt": {
+                "showPoint": false
+              }
+            },
+            "axisX": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "axisY": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "chartPadding": 1
+          }]
+        },
+        {
+          "id": 20, 
+          "name": "wnz",
+          "longTitle": "Westpac New Zealand",
+          "title": "WNZ",
+          "type": "Standard",
+          "chartType": "Line",
+          "category":  "Cash Earnings",
+          "class": "card",
+          "calloutElementId": "cashEarningsWNZIndex",
+          "indicatorElementId": "cashEarningsWNZChangeIndicator",
+          "changeTextElementId": "cashEarningsWNZChangeText",
+          "chartElementId": "cashEarningsWNZChart",
+          "data": [{
+            "labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
+            "series": [{
+              "name": "WNZ",
+              "data": [1.7, 1, -0.02, -0.6, 0, 0.6, -0.15, 0.3, 0, 0.28, 1.25, 1.32]
+            }]
+          }],
+          "chartOptions":[{
+            "fullWidth": true,
+            "height": "60%",
+            "series": {       
+              "WNZ": {
+                "showPoint": false
+              }
+            },
+            "axisX": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "axisY": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "chartPadding": 1
+          }]
+        },
+        {
+          "id": 21, 
+          "name": "gbu",
+          "longTitle": "GBU",
+          "title": "GBU",
+          "type": "Standard",
+          "chartType": "Line",
+          "category":  "Cash Earnings",
+          "class": "card",
+          "calloutElementId": "cashEarningsGBUIndex",
+          "indicatorElementId": "cashEarningsGBUChangeIndicator",
+          "changeTextElementId": "cashEarningsGBUChangeText",
+          "chartElementId": "cashEarningsGBUChart",
+          "data": [{
+            "labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
+            "series": [{
+              "name": "GBU",
+              "data": [1.7, 1, -0.02, -0.6, 0, 0.16, -0.15, 0.3, 0, 0.28, 1.35, 1.39]
+            }]
+          }],
+          "chartOptions":[{
+            "fullWidth": true,
+            "height": "60%",
+            "series": {       
+              "GBU": {
+                "showPoint": false
+              }
+            },
+            "axisX": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "axisY": {
+              "showGrid": false,
+              "showLabel": false,
+              "offset": 0
+            },
+            "chartPadding": 1
+          }]
+        }]
+      }]
+    }]
+  }]
+}
