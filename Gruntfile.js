@@ -36,6 +36,9 @@ var SETTINGS = function() {
 			'js': 'source/js',
 			'less': 'source/less',
 			'svgs': 'source/svgs',
+			'data': 'source/data',
+			'templates': 'source/templates',
+			'node_mods': 'node_modules',
 
 			'prod': '.',
 			'assets': 'assets',
@@ -146,7 +149,7 @@ module.exports = function(grunt) {
 						'!<%= SETTINGS.folder.js %>/customs/index-charts.js',
 					],
 				},
-			},
+			}
 		},
 
 
@@ -206,14 +209,48 @@ module.exports = function(grunt) {
 				}],
 			},
 			js: {
-				files:[{
-					cwd: '<%= SETTINGS.folder.js %>/customs/',
-					src: ['index-charts.js'],
-					dest: '<%= SETTINGS.folder.prod %>/<%= SETTINGS.folder.assets %>/js/customs',
+				files:[
+					{
+						cwd: '<%= SETTINGS.folder.js %>/customs/',
+						src: ['index-charts.js'],
+						dest: '<%= SETTINGS.folder.prod %>/<%= SETTINGS.folder.assets %>/js/customs',
+						filter: 'isFile',
+						expand: true,
+					},
+					{
+						cwd: '<%= SETTINGS.folder.node_mods %>/mustache/',
+						src: ['mustache.min.js'],
+						dest: '<%= SETTINGS.folder.prod %>/<%= SETTINGS.folder.assets %>/js/plugins',
+						filter: 'isFile',
+						expand: true,
+					},
+					{
+						cwd: '<%= SETTINGS.folder.node_mods %>/gsap/',
+						src: ['TweenLite.js','TimelineLite.js','TweenMax.js','TimelineMax.js'],
+						dest: '<%= SETTINGS.folder.prod %>/<%= SETTINGS.folder.assets %>/js/plugins',
+						filter: 'isFile',
+						expand: true,
+					},
+				],
+			},
+			data: {
+				files: [{
+					cwd: '<%= SETTINGS.folder.data %>',
+					src: ['**/*.json'],
+					dest: '<%= SETTINGS.folder.prod %>/<%= SETTINGS.folder.assets %>/data',
 					filter: 'isFile',
 					expand: true,
-				}],
+				}]
 			},
+			templates: {
+				files: [{
+					cwd: '<%= SETTINGS.folder.templates %>',
+					src: ['**/*.mst'],
+					dest: '<%= SETTINGS.folder.prod %>/<%= SETTINGS.folder.assets %>/templates',
+					filter: 'isFile',
+					expand: true,
+				}]
+			}
 		},
 
 
@@ -256,6 +293,29 @@ module.exports = function(grunt) {
 				],
 				tasks: [
 					'_js',
+					'copy',
+					'wakeup',
+				],
+			},
+
+
+			data: {
+				files: [
+					'<%= SETTINGS.folder.data %>/**/*.json',
+				],
+				tasks: [
+					'_data',
+					'copy',
+					'wakeup',
+				],
+			},
+
+			templates: {
+				files: [
+					'<%= SETTINGS.folder.templates %>/**/*.mst',
+				],
+				tasks: [
+					'_templates',
 					'copy',
 					'wakeup',
 				],
@@ -316,6 +376,14 @@ module.exports = function(grunt) {
 		'concat:js',
 	]);
 
+	grunt.registerTask('_data', [
+		'copy',
+	]);
+
+	grunt.registerTask('_templates', [
+		'copy',
+	]);
+
 	grunt.registerTask('_svg', [
 		'grunticon',
 		'copy',
@@ -326,6 +394,7 @@ module.exports = function(grunt) {
 		'font',
 		'_less',
 		'_js',
+		'_data',
 		'_svg',
 	]);
 

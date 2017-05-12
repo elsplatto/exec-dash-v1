@@ -1,0 +1,34 @@
+{{#dashboardMetrics}}
+	{{#metrics}}
+		<div class="row top-margin6-xs">
+			<div class="col-xs-12">
+				<span class="metric-header">{{title}}</span>
+			</div>
+		</div>
+		{{#data}}
+			<div class="row top-margin6-xs">
+				<div class="col-xs-12">
+					<span class="section-header">{{title}}</span>
+				</div>
+			</div>
+
+			<div class="row top-margin2-xs">
+				<div class="container-fluid dash-card-holder">
+				{{#row}}
+					<div class="{{class}}" id="{{cardId}}">
+						<div class="graph-header top-margin3-xs">
+						{{title}}
+						</div>
+						<div class="headline-holder top-margin4-xs">
+							<span class="main-callout" id="{{calloutElementId}}"></span>
+							<span class="change-indicator icon icon-size-sm" id="{{indicatorElementId}}" data-grunticon-embed></span>
+							<span class="change-text" id="{{changeTextElementId}}"></span>
+						</div>
+						<div class="ct-chart ct-golden-section standard-chart" id="{{chartElementId}}"></div>
+					</div>
+					{{/row}}
+				</div>
+			</div>
+		{{/data}}
+	{{/metrics}}
+{{/dashboardMetrics}}

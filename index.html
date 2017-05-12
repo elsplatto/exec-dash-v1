@@ -135,14 +135,14 @@
 				<div class="row">
 					<div class="headerline col-xs-8">
 						<h1 class="header-headline" id="bannerHeading">
-							<strong>Group</strong> Financial
+							<strong>Westpac</strong> Group
 						</h1>
 					</div>
 					<div class="headermode col-xs-4">
 						<!-- <span class="size-test" style="float: right;"></span> -->
 						<div class="headermode-links">
-							<a href="#">Operational</a>
-							<a href="#" class="active">Financial</a>
+							<a href="#" class="js-data-link active" data-file="dashboard-financial-strength-data.json">Financial</a>
+							<a href="#" class="js-data-link" data-file="dashboard-operational-data.json">Operational</a>
 						</div>
 					</div>
 				</div>
@@ -151,7 +151,7 @@
 
 
 		<main id="content" class="main-content">
-			<div id="sectionControls" class="section-controls">
+			<div id="utilityBar" class="utility-bar">
 				<div class="container content-container">
 					<div class="row">
 						<div class="col-xs-6">
@@ -201,363 +201,171 @@
 					</div>
 					<hr />
 				</div>
-
 			</div>
 
-			<div class="container content-container">
+			<div class="container content-container js-card-container" id="graphArea">
 
-				<div class="row top-margin4-xs">
-					<div class="col-xs-12">
-						<span class="section-header">Margin (%)</span>
-					</div>
-				</div>
-
-				<div class="row top-margin2-xs">
-					<div class="container-fluid dash-card-holder">
-						<div class="col-xs-4 card-main">
-							<div class="graph-header top-margin3-xs">
-							Westpac Group
-							</div>
-							<div class="headline-holder top-margin4-xs">
-								<span class="main-callout" id="marginHeroIndex"></span>
-								<span class="change-indicator icon icon-size-sm" id="marginHeroChangeIndicator" data-grunticon-embed></span>
-								<span class="change-text" id="marginHeroChangeText"></span>
-							</div>
-							<div class="ct-chart ct-golden-section standard-chart" id="marginWBGChart"></div>
-						</div>
-
-						<div class="col-xs-2 card">
-							<div class="graph-header top-margin3-xs">
-							CB
-							</div>
-							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
-								<span class="main-callout" id="marginCBIndex"></span>
-								<span class="change-indicator icon icon-size-sm" id="marginCBChangeIndicator" data-grunticon-embed></span>
-								<span class="change-text" id="marginCBChangeText"></span>
-							</div>
-
-							<div class="ct-chart ct-golden-section standard-chart" id="marginCBChart"></div>
-						</div>
-
-						<div class="col-xs-2 card">
-							<div class="graph-header top-margin3-xs">
-							BB
-							</div>
-
-							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
-								<span class="main-callout" id="marginBBIndex"></span>
-								<span class="change-indicator icon icon-size-sm" id="marginBBChangeIndicator" data-grunticon-embed></span>
-								<span class="change-text" id="marginBBChangeText"></span>
-							</div>
-
-							<div class="ct-chart ct-golden-section standard-chart" id="marginBBChart"></div>
-						</div>
-
-						<div class="col-xs-2 card">
-							<div class="graph-header top-margin3-xs">
-							WIB
-							</div>
-
-							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
-								<span class="main-callout" id="marginWIBIndex"></span>
-								<span class="change-indicator icon icon-size-sm" id="marginWIBChangeIndicator" data-grunticon-embed></span>
-								<span class="change-text" id="marginWIBChangeText"></span>
-							</div>
-
-							<div class="ct-chart ct-golden-section standard-chart" id="marginWIBChart"></div>
-						</div>
-
-						<div class="col-xs-2 card">
-							<div class="graph-header top-margin3-xs">
-							BT
-							</div>
-
-							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
-								<span class="main-callout" id="marginBTIndex"></span>
-								<span class="change-indicator icon icon-size-sm" id="marginBTChangeIndicator" data-grunticon-embed></span>
-								<span class="change-text" id="marginBTChangeText"></span>
-							</div>
-
-							<div class="ct-chart ct-golden-section standard-chart" id="marginBTChart"></div>
-						</div>
-						
-						<div class="col-xs-2 card">
-							<div class="graph-header top-margin3-xs">
-							WNZ
-							</div>
-
-							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
-								<span class="main-callout" id="marginWNZIndex"></span>
-								<span class="change-indicator icon icon-size-sm" id="marginWNZChangeIndicator" data-grunticon-embed></span>
-								<span class="change-text" id="marginWNZChangeText"></span>
-							</div>
-
-							<div class="ct-chart ct-golden-section standard-chart" id="marginWNZChart"></div>
-						</div>
-						
-						<div class="col-xs-2 card">
-							<div class="graph-header top-margin3-xs">
-							GBU
-							</div>
-
-							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
-								<span class="main-callout" id="marginGBUIndex"></span>
-								<span class="change-indicator icon icon-size-sm" id="marginGBUChangeIndicator" data-grunticon-embed></span>
-								<span class="change-text" id="marginGBUChangeText"></span>
-							</div>
-
-							<div class="ct-chart ct-golden-section standard-chart" id="marginGBUChart"></div>
-						</div>
-
-					</div>
-				</div>
-
-				<div class="row top-margin6-xs">
-					<div class="col-xs-12">
-						<span class="section-header">ROE (%)</span>
-					</div>
-				</div>
-
-				<div class="row top-margin2-xs">
-					<div class="container-fluid dash-card-holder">
-
-						<div class="col-xs-4 card-main">
-
-							<div class="graph-header top-margin3-xs">
-							Westpac Group
-							</div>
-
-							<div class="headline-holder top-margin4-xs">
-								<span class="main-callout" id="roeHeroIndex"></span>
-								<span class="change-indicator icon icon-size-sm" id="roeHeroChangeIndicator" data-grunticon-embed></span>
-								<span class="change-text" id="roeHeroChangeText"></span>
-							</div>
-
-							<div class="ct-chart ct-golden-section standard-chart" id="roeWBGChart"></div>
-
-						</div>
-
-						<div class="col-xs-2 card">
-							<div class="graph-header top-margin3-xs">
-							CB
-							</div>
-
-							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
-								<span class="main-callout" id="roeCBIndex"></span>
-								<span class="change-indicator icon icon-size-sm" id="roeCBChangeIndicator" data-grunticon-embed></span>
-								<span class="change-text" id="roeCBChangeText"></span>
-							</div>
-
-							<div class="ct-chart ct-golden-section standard-chart" id="roeCBChart"></div>
-						</div>
-
-						<div class="col-xs-2 card">
-							<div class="graph-header top-margin3-xs">
-							BB
-							</div>
-
-							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
-								<span class="main-callout" id="roeBBIndex"></span>
-								<span class="change-indicator icon icon-size-sm" id="roeBBChangeIndicator" data-grunticon-embed></span>
-								<span class="change-text" id="roeBBChangeText"></span>
-							</div>
-
-							<div class="ct-chart ct-golden-section standard-chart" id="roeBBChart"></div>
-						</div>
-
-						<div class="col-xs-2 card">
-							<div class="graph-header top-margin3-xs">
-							WIB
-							</div>
-
-							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
-								<span class="main-callout" id="roeWIBIndex"></span>
-								<span class="change-indicator icon icon-size-sm" id="roeWIBChangeIndicator" data-grunticon-embed></span>
-								<span class="change-text" id="roeWIBChangeText"></span>
-							</div>
-
-							<div class="ct-chart ct-golden-section standard-chart" id="roeWIBChart"></div>
-						</div>
-
-						<div class="col-xs-2 card">
-							<div class="graph-header top-margin3-xs">
-							BT
-							</div>
-
-							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
-								<span class="main-callout" id="roeBTIndex"></span>
-								<span class="change-indicator icon icon-size-sm" id="roeBTChangeIndicator" data-grunticon-embed></span>
-								<span class="change-text" id="roeBTChangeText"></span>
-							</div>
-
-							<div class="ct-chart ct-golden-section standard-chart" id="roeBTChart"></div>
-						</div>
-						
-						<div class="col-xs-2 card">
-							<div class="graph-header top-margin3-xs">
-							WNZ
-							</div>
-
-							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
-								<span class="main-callout" id="roeWNZIndex"></span>
-								<span class="change-indicator icon icon-size-sm" id="roeWNZChangeIndicator" data-grunticon-embed></span>
-								<span class="change-text" id="roeWNZChangeText"></span>
-							</div>
-
-							<div class="ct-chart ct-golden-section standard-chart" id="roeWNZChart"></div>
-						</div>
-						
-						<div class="col-xs-2 card">
-							<div class="graph-header top-margin3-xs">
-							GBU
-							</div>
-
-							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
-								<span class="main-callout" id="roeGBUIndex"></span>
-								<span class="change-indicator icon icon-size-sm" id="roeGBUChangeIndicator" data-grunticon-embed></span>
-								<span class="change-text" id="roeGBUChangeText"></span>
-							</div>
-
-							<div class="ct-chart ct-golden-section standard-chart" id="roeGBUChart"></div>
-						</div>
-
-					</div>
-				</div>
-
-
-				<div class="row top-margin6-xs">
-					<div class="col-xs-12">
-						<span class="section-header">Cash Earnings (%)</span>
-					</div>
-				</div>
-
-				<div class="row top-margin2-xs">
-					<div class="container-fluid dash-card-holder">
-
-						<div class="col-xs-4 card-main">
-
-							<div class="graph-header top-margin3-xs">
-							Westpac Group
-							</div>
-
-							<div class="headline-holder top-margin4-xs">
-								<span class="main-callout" id="cashEarningsHeroIndex"></span>
-								<span class="change-indicator icon icon-size-sm" id="cashEarningsHeroChangeIndicator" data-grunticon-embed></span>
-								<span class="change-text" id="cashEarningsHeroChangeText"></span>
-							</div>
-
-							<div class="ct-chart ct-golden-section standard-chart" id="cashEarningsWBGChart"></div>
-
-						</div>
-
-						<div class="col-xs-2 card">
-							<div class="graph-header top-margin3-xs">
-							CB
-							</div>
-
-							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
-								<span class="main-callout" id="cashEarningsCBIndex"></span>
-								<span class="change-indicator icon icon-size-sm" id="cashEarningsCBChangeIndicator" data-grunticon-embed></span>
-								<span class="change-text" id="cashEarningsCBChangeText"></span>
-							</div>
-
-							<div class="ct-chart ct-golden-section standard-chart" id="cashEarningsCBChart"></div>
-						</div>
-
-						<div class="col-xs-2 card">
-							<div class="graph-header top-margin3-xs">
-							BB
-							</div>
-
-							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
-								<span class="main-callout" id="cashEarningsBBIndex"></span>
-								<span class="change-indicator icon icon-size-sm" id="cashEarningsBBChangeIndicator" data-grunticon-embed></span>
-								<span class="change-text" id="cashEarningsBBChangeText"></span>
-							</div>
-
-							<div class="ct-chart ct-golden-section standard-chart" id="cashEarningsBBChart"></div>
-						</div>
-
-						<div class="col-xs-2 card">
-							<div class="graph-header top-margin3-xs">
-							WIB
-							</div>
-
-							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
-								<span class="main-callout" id="cashEarningsWIBIndex"></span>
-								<span class="change-indicator icon icon-size-sm" id="cashEarningsWIBChangeIndicator" data-grunticon-embed></span>
-								<span class="change-text" id="cashEarningsWIBChangeText"></span>
-							</div>
-
-							<div class="ct-chart ct-golden-section standard-chart" id="cashEarningsWIBChart"></div>
-						</div>
-
-						<div class="col-xs-2 card">
-							<div class="graph-header top-margin3-xs">
-							BT
-							</div>
-
-							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
-								<span class="main-callout" id="cashEarningsBTIndex"></span>
-								<span class="change-indicator icon icon-size-sm" id="cashEarningsBTChangeIndicator" data-grunticon-embed></span>
-								<span class="change-text" id="cashEarningsBTChangeText"></span>
-							</div>
-
-							<div class="ct-chart ct-golden-section standard-chart" id="cashEarningsBTChart"></div>
-						</div>
-						
-						<div class="col-xs-2 card">
-							<div class="graph-header top-margin3-xs">
-							WNZ
-							</div>
-
-							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
-								<span class="main-callout" id="cashEarningsWNZIndex"></span>
-								<span class="change-indicator icon icon-size-sm" id="cashEarningsWNZChangeIndicator" data-grunticon-embed></span>
-								<span class="change-text" id="cashEarningsWNZChangeText"></span>
-							</div>
-
-							<div class="ct-chart ct-golden-section standard-chart" id="cashEarningsWNZChart"></div>
-						</div>
-						
-						<div class="col-xs-2 card">
-							<div class="graph-header top-margin3-xs">
-							GBU
-							</div>
-
-							<div class="headline-holder top-margin4-xs bottom-margin2-xs">
-								<span class="main-callout" id="cashEarningsGBUIndex"></span>
-								<span class="change-indicator icon icon-size-sm" id="cashEarningsGBUChangeIndicator" data-grunticon-embed></span>
-								<span class="change-text" id="cashEarningsGBUChangeText"></span>
-							</div>
-
-							<div class="ct-chart ct-golden-section standard-chart" id="cashEarningsGBUChart"></div>
-						</div>
-
-					</div>
-				</div>
-
-			</div>
-
-			<div class="container">
-
-			</div>
+			</div>			
 		</main>
+
+		<div class="footer-nav">
+			<div class="container">
+				<div class="footer-metric-header">Financial Metrics<span class="icon icon-size-sm symbol-triangle"></span></div>
+				<ul>
+					<li><a href="#" data-file="dashboard-financial-strength-data.json" class="js-data-link active">Strength</a></li>
+					<li><a href="#" data-file="dashboard-financial-return-data.json" class="js-data-link">Return</a></li>
+					<li><a href="#" data-file="dashboard-financial-productivity-data.json" class="js-data-link">Productivity</a></li>
+					<li><a href="#" data-file="dashboard-financial-growth-data.json" class="js-data-link">Growth</a></li>
+					<li><a href="#" data-file="dashboard-financial-detail-data.json" class="js-data-link">Detailed Reports</a></li>
+				</ul>
+			</div>
+		</div>
 
 	</div>
 
 	<script src="assets/js/gui.min.js"></script>
 
-	<script src="assets/js/customs/index-charts.js"></script>
+	<!-- <script src="assets/js/customs/index-charts.js"></script> -->
 
-	<script>		
-	$(function(){		
+	<script src="assets/js/plugins/mustache.min.js"></script>
+	<script src="assets/js/plugins/TimelineLite.js"></script>
+	<script src="assets/js/plugins/TweenLite.js"></script>
+	<script src="assets/js/plugins/TweenMax.js"></script>
+
+	<script>
+
+	$(function() {	
+
+		var dashData = null;
+
+		var basePointChange = null;
+
+		var dataBasePath = 'assets/data/'
+
+		var dataFile = dataBasePath+'dashboard-financial-strength-data.json';
+
+		$('.js-data-link').on('click', function(e) {
+			e.preventDefault();
+
+			var parentEl = $(this).closest('div');
+			console.dir(parentEl);
+			parentEl.find('.js-data-link.active').removeClass('active');
+			console.dir($(this))
+			$(this).addClass('active');
+			dataFile = dataBasePath + $(this).attr('data-file');
+			fetchDataFile(dataFile);
+		});
+
+		fetchDataFile(dataFile);
+
+		function fetchDataFile(file)
+		{
+			$.get(file,function(data) {
+				dashData = data;
+				loadDashGraphs();
+			}).error(function(data,status,responseJSON) {
+				console.log('error:' + status)
+				console.dir(responseJSON)
+				console.dir(data)
+			});
+		}
+
+		function loadDashGraphs() {
+		  $.get('source/templates/dashboard-cards.mst', function(template) {
+
+		    var rendered = Mustache.render(template, dashData);
+		    $('#graphArea').html(rendered);
+
+		    var chartObj = null;
+
+		    var metricData = dashData.dashboardMetrics[0]['metrics'][0].data		    
+
+		    if (metricData.length > 0)
+    		{
+    			for (var i = 0; i < metricData.length; i++) 
+			    {
+			    	if (metricData[i].row.length > 0)
+			    	{
+			    		for (var j=0;j<metricData[i].row.length;j++) 
+			    		{
+			    	
+					    	chartObj = new Chartist[metricData[i].row[j].chartType]('#'+ metricData[i].row[j].chartElementId, metricData[i].row[j].data[0], metricData[i].row[j].chartOptions[0]);
+
+								basePointChange = calculateBasePointChange(chartObj);								
+
+								$('#' + metricData[i].row[j].calloutElementId).text(getLastIndex(chartObj));
+
+								$('#' + metricData[i].row[j].changeTextElementId).text(basePointChange);
+
+								if (basePointChange > 0) {
+									$('#' + metricData[i].row[j].indicatorElementId).addClass('symbol-triangle');
+								}
+								else if (basePointChange < 0) {
+									$('#' + metricData[i].row[j].indicatorElementId).addClass('symbol-triangle-red dir-down');
+									$('#' + metricData[i].row[j].cardId).addClass('attention');
+								}
+
+			    		}
+			    	}			    	
+		    	}
+    		}		    
+		  });
+		}
+
+		var target = document.querySelector('#graphArea');		 
+		// create an observer instance
+		var observer = new MutationObserver(function(mutations) {
+	    mutations.forEach(function(mutation) {
+        if (mutation.type.toLowerCase() === 'childlist') {
+        	var i,j = 0;
+        	var cardHolders = [].slice.call(target.getElementsByClassName('dash-card-holder'));
+        	var cardRow = {};
+        	var mainCards = [];
+        	var standardCards = [];
+
+        	if (cardHolders.length > 0) {
+        		for (i=0;i<cardHolders.length;i++) {
+        			mainCards.push(cardHolders[i].getElementsByClassName('card-main'));
+        			standardCards.push(cardHolders[i].getElementsByClassName('card'));
+        			cardRow.mainCards = mainCards;
+        			cardRow.cards = standardCards;
+        		}
+        	}
+    			setTimeout(showCard.bind(null, cardRow), 200);	        	
+        }
+	    });
+		});
+
+		// configuration of the observer:
+		var config = { attributes: true, subTree: true, childList: true, characterData: true }
+
+		// pass in the target node, as well as the observer options
+		observer.observe(target, config);
+
+		function showCard(obj) {
+			var i, j = 0;
+			var target = null;
+			var leftPos = null;
+
+			for (i=0;i<obj.mainCards.length;i++) {
+				$(obj.mainCards[i][0]).addClass('show');
+				for (j=0;j<obj.cards[i].length;j++) {		
+					$(obj.cards[i][j]).addClass('show');				
+				}
+			}
+		}		
 
 		var headerHeight = $('header').outerHeight();
 		var scrollTarget = headerHeight - 100;
 		if (headerHeight < 150) {
 			scrollTarget = headerHeight - 50;
+			
 		}
+
+
+		$('.footer-metric-header').click(function() {
+			$(this).closest('.footer-nav').toggleClass('up')
+		})
 
 		$(window).resize(function(e) {
 			headerHeight = $('header').outerHeight();
@@ -569,7 +377,7 @@
 		})
 
 		$(window).scroll(function(e){
-			console.log('scrolling:' + $(this).scrollTop());
+			// console.log('scrolling:' + $(this).scrollTop());
 			// xs screen
 			if (headerHeight < 150)
 			{
@@ -594,15 +402,15 @@
 			
 
 			if ($(this).scrollTop() > scrollTarget && !$('header').hasClass('fixed')) {
-				console.log('[=======fix applied=======]');
+				// console.log('[=======fix applied=======]');
 				$('header').addClass('fixed');
-				$('#sectionControls').addClass('fixed');				
+				$('#utilityBar').addClass('fixed');				
 				$('#content').addClass('scroll-top');
 			}
 			else if ($(this).scrollTop() < scrollTarget && $('header').hasClass('fixed')) {
-				console.log('[=======fix removed=======]');
+				// console.log('[=======fix removed=======]');
 				$('header').removeClass('fixed');
-				$('#sectionControls').removeClass('fixed');			
+				$('#utilityBar').removeClass('fixed');			
 				$('#content').removeClass('scroll-top');
 			}
 		});
@@ -626,7 +434,6 @@
 		});
 
 		$('li').on('click', function(e) {
-			// var parent = $(this).nearest('li').toggleClass('open');
 			$(this).toggleClass('open')
 		})
 
@@ -642,6 +449,18 @@
 			$('#menuButton').removeClass('open');
 			$('body').removeClass('no-scroll');
 			$('#shadeOverlay').removeClass('show');
+		}
+
+		function calculateBasePointChange(obj) {
+			var lastNumber = obj.data.series[0].data[obj.data.series[0].data.length-1];
+			var secondLastNumber = obj.data.series[0].data[obj.data.series[0].data.length-2];
+
+			return Math.round((lastNumber - secondLastNumber)*100);
+		}
+
+		function getLastIndex(obj) {
+			var lastNumber = obj.data.series[0].data[obj.data.series[0].data.length-1];
+			return lastNumber;
 		}
 	});
 	</script>

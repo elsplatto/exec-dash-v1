@@ -368,6 +368,8 @@
 .icon-transport,
 .symbol-transport { background-image: url('../img/transport.png'); background-repeat: no-repeat; }
 
+.symbol-triangle-red { background-image: url('../img/triangle-red.png'); background-repeat: no-repeat; }
+
 .symbol-triangle { background-image: url('../img/triangle.png'); background-repeat: no-repeat; }
 
 .icon-twitter,
