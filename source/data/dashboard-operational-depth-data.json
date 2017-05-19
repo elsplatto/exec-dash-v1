@@ -6,6 +6,7 @@
       "title": "Depth of Relationship",
       "data": 
       [{
+        "rowId": "depthTermDepositsRow",
         "title": "Term Deposits (bps)",
         "row": 
         [{
@@ -48,6 +49,33 @@
               "offset": 0
             },
             "chartPadding": 1
+          }],
+          "detailData": [{
+            "exists" : true,
+            "data": [{
+              "pos": 0,
+              "title": "Westpac Retail",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginCBCard"
+            },
+            {
+              "pos": 1,
+              "title": "STG",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginCBCard"
+            },
+            {
+              "pos": 2,
+              "title": "BOM",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginCBCard"
+            }]
           }]
         },
         {
@@ -304,6 +332,7 @@
         }]
       },
       {
+        "rowId": "depthROERow",
         "title": "ROE (%)",
         "row":
         [{
@@ -602,6 +631,7 @@
         }]
       },
       {
+        "rowId": "depthCashRow",
         "title": "Cash Earnings (%)",
         "row":
         [{

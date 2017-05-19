@@ -6,6 +6,7 @@
       "title": "Strength",
       "data": 
       [{
+        "rowId": "strengthMarginRow",
         "title": "Margins (%)",
         "row": 
         [{
@@ -90,6 +91,49 @@
               "offset": 0
             },
             "chartPadding": 1
+          }],
+          "detailData": [{
+            "exists" : true,
+            "data": [{
+              "pos": 0,
+              "title": "Westpac Retail",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "strengthMarginCBCard"
+            },
+            {
+              "pos": 1,
+              "title": "STG",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "strengthMarginCBCard"
+            },
+            {
+              "pos": 2,
+              "title": "BOM",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "strengthMarginCBCard"
+            },
+            {
+              "pos": 3,
+              "title": "BSA",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "strengthMarginCBCard"
+            },
+            {
+              "pos": 4,
+              "title": "RAMS",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "strengthMarginCBCard"
+            }]
           }]
         },
         {
@@ -132,6 +176,41 @@
               "offset": 0
             },
             "chartPadding": 1
+          }],
+          "detailData": [{
+            "exists" : true,
+            "data": [{
+              "pos": 0,
+              "title": "Web Commercial",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "strengthMarginBBCard"
+            },
+            {
+              "pos": 1,
+              "title": "WBC SME",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "strengthMarginBBCard"
+            },
+            {
+              "pos": 2,
+              "title": "STG COM & SME",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "strengthMarginBBCard"
+            },
+            {
+              "pos": 3,
+              "title": "Specialist Finance",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "strengthMarginBBCard"
+            }]
           }]
         },
         {
@@ -174,6 +253,49 @@
               "offset": 0
             },
             "chartPadding": 1
+          }],
+          "detailData": [{
+            "exists" : true,
+            "data": [{
+              "pos": 0,
+              "title": "GTS",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "strengthMarginWIBCard"
+            },
+            {
+              "pos": 1,
+              "title": "Corp & Inst",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "strengthMarginWIBCard"
+            },
+            {
+              "pos": 2,
+              "title": "Hastings",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "strengthMarginWIBCard"
+            },
+            {
+              "pos": 3,
+              "title": "Financial Markets",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "strengthMarginWIBCard"
+            },
+            {
+              "pos": 4,
+              "title": "Westpac Pacific",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "strengthMarginWIBCard"
+            }]
           }]
         },
         {
@@ -216,6 +338,65 @@
               "offset": 0
             },
             "chartPadding": 1
+          }],
+          "detailData": [{
+            "exists" : true,
+            "data": [{
+              "pos": 0,
+              "title": "Super",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "strengthMarginBTCard"
+            },
+            {
+              "pos": 1,
+              "title": "Platform & Invest",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "strengthMarginBTCard"
+            },
+            {
+              "pos": 2,
+              "title": "Investments",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "strengthMarginBTCard"
+            },
+            {
+              "pos": 3,
+              "title": "Life Insurance",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "strengthMarginBTCard"
+            },
+            {
+              "pos": 4,
+              "title": "GI & LMI",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "strengthMarginBTCard"
+            },
+            {
+              "pos": 5,
+              "title": "Private Wealth",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "strengthMarginBTCard"
+            },
+            {
+              "pos": 6,
+              "title": "Advice",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "strengthMarginBTCard"
+            }]
           }]
         },
         {
@@ -258,6 +439,41 @@
               "offset": 0
             },
             "chartPadding": 1
+          }],
+          "detailData": [{
+            "exists" : true,
+            "data": [{
+              "pos": 0,
+              "title": "Consumer & Wealth",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "strengthMarginWNZCard"
+            },
+            {
+              "pos": 1,
+              "title": "Comm Corp & Inst",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "strengthMarginWNZCard"
+            },
+            {
+              "pos": 2,
+              "title": "Invest & INS",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "strengthMarginWNZCard"
+            },
+            {
+              "pos": 3,
+              "title": "NZ Treasury",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "strengthMarginWNZCard"
+            }]
           }]
         },
         {
@@ -300,10 +516,30 @@
               "offset": 0
             },
             "chartPadding": 1
+          }],
+          "detailData": [{
+            "exists" : true,
+            "data": [{
+              "pos": 0,
+              "title": "Treasury",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "strengthMarginGBUCard"
+            },
+            {
+              "pos": 1,
+              "title": "Group Capital",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "strengthMarginGBUCard"
+            }]
           }]
         }]
       },
       {
+        "rowId": "strengthROERow",
         "title": "ROE (%)",
         "row":
         [{
@@ -430,6 +666,33 @@
               "offset": 0
             },
             "chartPadding": 1
+          }],
+          "detailData": [{
+            "exists" : true,
+            "data": [{
+              "pos": 0,
+              "title": "Westpac Retail",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "roeBBCard"
+            },
+            {
+              "pos": 1,
+              "title": "STG",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "roeBBCard"
+            },
+            {
+              "pos": 2,
+              "title": "BOM",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "roeBBCard"
+            }]
           }]
         },
         {
@@ -472,6 +735,33 @@
               "offset": 0
             },
             "chartPadding": 1
+          }],
+          "detailData": [{
+            "exists" : true,
+            "data": [{
+              "pos": 0,
+              "title": "Westpac Retail",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "roeWIBCard"
+            },
+            {
+              "pos": 1,
+              "title": "STG",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "roeWIBCard"
+            },
+            {
+              "pos": 2,
+              "title": "BOM",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "roeWIBCard"
+            }]
           }]
         },
         {
@@ -602,6 +892,7 @@
         }]
       },
       {
+        "rowId": "strengthCashRow",
         "title": "Cash Earnings (%)",
         "row":
         [{

@@ -12,20 +12,34 @@
 				</div>
 			</div>
 
-			<div class="row top-margin2-xs">
+			<div class="row top-margin2-xs" id="{{rowId}}">
 				<div class="container-fluid dash-card-holder">
-				{{#row}}
-					<div class="{{class}}" id="{{cardId}}">
-						<div class="graph-header top-margin3-xs">
-						{{title}}
+					{{#row}}
+						<div class="{{class}}" id="{{cardId}}">
+							<div class="card-title">
+							{{title}}
+							</div>
+							<div class="headline-holder top-margin2-xs">
+								<span class="main-callout" id="{{calloutElementId}}"></span>
+								<span class="change-indicator icon icon-size-sm" id="{{indicatorElementId}}" data-grunticon-embed></span>
+								<span class="change-text" id="{{changeTextElementId}}"></span>
+							</div>
+							<div class="ct-chart ct-golden-section standard-chart" id="{{chartElementId}}"></div>
 						</div>
-						<div class="headline-holder top-margin4-xs">
-							<span class="main-callout" id="{{calloutElementId}}"></span>
-							<span class="change-indicator icon icon-size-sm" id="{{indicatorElementId}}" data-grunticon-embed></span>
-							<span class="change-text" id="{{changeTextElementId}}"></span>
-						</div>
-						<div class="ct-chart ct-golden-section standard-chart" id="{{chartElementId}}"></div>
-					</div>
+						{{#detailData}}
+							{{#data}}
+							<div class="undercard" data-parent="{{parentElementId}}" data-pos="{{pos}}">
+								<div class="title">{{title}}</div>
+
+								<div class="headline-holder top-margin1-xs">
+									<span class="main-callout" id="cashEarningsCBIndex">{{index}}</span>
+									<span class="change-indicator icon icon-size-sm symbol-triangle"></span>
+									<span class="change-text" id="cashEarningsCBChangeText">{{diff}}</span>
+								</div>
+
+							</div>
+							{{/data}}
+						{{/detailData}}
 					{{/row}}
 				</div>
 			</div>

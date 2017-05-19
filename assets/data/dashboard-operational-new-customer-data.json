@@ -6,6 +6,7 @@
       "title": "New Customers",
       "data": 
       [{
+        "rowId": "newTermDepositsRow",
         "title": "Term Deposits (bps)",
         "row": 
         [{
@@ -14,7 +15,7 @@
           "longTitle": "Westpac Banking Group",
           "title": "Westpac Group",
           "type": "Hero",
-          "chartType": "Bar",
+          "chartType": "Line",
           "category": "Margin",
           "cardId": "marginHeroCard",
           "class": "card-main",
@@ -29,7 +30,7 @@
               "data": [-0.08, -0.4, 0, -0.2, 0.31, 0.75, 1, 1.02, 0.89, 1.02, 1.04, 1.09]
             }]
           }], 
-          "chartOptions": [{
+          "chartOptions":[{
             "fullWidth": true,
             "height": "100%",
             "series": {       
@@ -90,6 +91,49 @@
               "offset": 0
             },
             "chartPadding": 1
+          }],
+          "detailData": [{
+            "exists" : true,
+            "data": [{
+              "pos": 0,
+              "title": "Westpac Retail",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginCBCard"
+            },
+            {
+              "pos": 1,
+              "title": "STG",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginCBCard"
+            },
+            {
+              "pos": 2,
+              "title": "BOM",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginCBCard"
+            },
+            {
+              "pos": 3,
+              "title": "BSA",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginCBCard"
+            },
+            {
+              "pos": 4,
+              "title": "RAMS",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginCBCard"
+            }]
           }]
         },
         {
@@ -132,6 +176,41 @@
               "offset": 0
             },
             "chartPadding": 1
+          }],
+          "detailData": [{
+            "exists" : true,
+            "data": [{
+              "pos": 0,
+              "title": "Web Commercial",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginBBCard"
+            },
+            {
+              "pos": 1,
+              "title": "WBC SME",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginBBCard"
+            },
+            {
+              "pos": 2,
+              "title": "STG COM & SME",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginBBCard"
+            },
+            {
+              "pos": 3,
+              "title": "Specialist Finance",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginBBCard"
+            }]
           }]
         },
         {
@@ -174,6 +253,49 @@
               "offset": 0
             },
             "chartPadding": 1
+          }],
+          "detailData": [{
+            "exists" : true,
+            "data": [{
+              "pos": 0,
+              "title": "GTS",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginWIBCard"
+            },
+            {
+              "pos": 1,
+              "title": "Corp & Inst",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginWIBCard"
+            },
+            {
+              "pos": 2,
+              "title": "Hastings",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginWIBCard"
+            },
+            {
+              "pos": 3,
+              "title": "Financial Markets",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginWIBCard"
+            },
+            {
+              "pos": 4,
+              "title": "Westpac Pacific",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginWIBCard"
+            }]
           }]
         },
         {
@@ -216,6 +338,65 @@
               "offset": 0
             },
             "chartPadding": 1
+          }],
+          "detailData": [{
+            "exists" : true,
+            "data": [{
+              "pos": 0,
+              "title": "Super",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginBTCard"
+            },
+            {
+              "pos": 1,
+              "title": "Platform & Invest",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginBTCard"
+            },
+            {
+              "pos": 2,
+              "title": "Investments",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginBTCard"
+            },
+            {
+              "pos": 3,
+              "title": "Life Insurance",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginBTCard"
+            },
+            {
+              "pos": 4,
+              "title": "GI & LMI",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginBTCard"
+            },
+            {
+              "pos": 5,
+              "title": "Private Wealth",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginBTCard"
+            },
+            {
+              "pos": 6,
+              "title": "Advice",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginBTCard"
+            }]
           }]
         },
         {
@@ -258,6 +439,41 @@
               "offset": 0
             },
             "chartPadding": 1
+          }],
+          "detailData": [{
+            "exists" : true,
+            "data": [{
+              "pos": 0,
+              "title": "Consumer & Wealth",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginWNZCard"
+            },
+            {
+              "pos": 1,
+              "title": "Comm Corp & Inst",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginWNZCard"
+            },
+            {
+              "pos": 2,
+              "title": "Invest & INS",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginWNZCard"
+            },
+            {
+              "pos": 3,
+              "title": "NZ Treasury",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginWNZCard"
+            }]
           }]
         },
         {
@@ -300,11 +516,31 @@
               "offset": 0
             },
             "chartPadding": 1
+          }],
+          "detailData": [{
+            "exists" : true,
+            "data": [{
+              "pos": 0,
+              "title": "Treasury",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginGBUCard"
+            },
+            {
+              "pos": 1,
+              "title": "Group Capital",
+              "index": "50.01",
+              "trend": "up",
+              "diff": 25,
+              "parentElementId": "marginGBUCard"
+            }]
           }]
         }]
       },
       {
-        "title": "ROE (%)",
+        "rowId": "newROERow",
+        "title": "Term Deposits - Volume ($m)",
         "row":
         [{
           "id": 8, 
@@ -602,7 +838,8 @@
         }]
       },
       {
-        "title": "Cash Earnings (%)",
+        "rowId": "mortgageApplicationDiscountsRow",
+        "title": "Mortgage Applications Discounts (bps)",
         "row":
         [{
           "id": 15, 
@@ -611,13 +848,13 @@
           "title": "Westpac Group",
           "type": "Hero",
           "chartType": "Line",
-          "category":  "Cash Earnings",
-          "cardId": "cashEarningsHeroCard",
+          "category":  "mortgageApplicationDiscounts",
+          "cardId": "mortgageApplicationDiscountsHeroCard",
           "class": "card-main",
-          "calloutElementId": "cashEarningsHeroIndex",
-          "indicatorElementId": "cashEarningsHeroChangeIndicator",
-          "changeTextElementId": "cashEarningsHeroChangeText",
-          "chartElementId": "cashEarningsWBGChart",
+          "calloutElementId": "mortgageApplicationDiscountsHeroIndex",
+          "indicatorElementId": "mortgageApplicationDiscountsHeroChangeIndicator",
+          "changeTextElementId": "mortgageApplicationDiscountsHeroChangeText",
+          "chartElementId": "mortgageApplicationDiscountsWBGChart",
           "data": [{
             "labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
             "series": [{
@@ -655,10 +892,10 @@
           "chartType": "Line",
           "category":  "Cash Earnings",
           "class": "card",
-          "calloutElementId": "cashEarningsCBIndex",
-          "indicatorElementId": "cashEarningsCBChangeIndicator",
-          "changeTextElementId": "cashEarningsCBChangeText",
-          "chartElementId": "cashEarningsCBChart",
+          "calloutElementId": "mortgageApplicationDiscountsCBIndex",
+          "indicatorElementId": "mortgageApplicationDiscountsCBChangeIndicator",
+          "changeTextElementId": "mortgageApplicationDiscountsCBChangeText",
+          "chartElementId": "mortgageApplicationDiscountsCBChart",
           "data": [{
             "labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
             "series": [{
@@ -696,10 +933,10 @@
           "chartType": "Line",
           "category":  "Cash Earnings",
           "class": "card",
-          "calloutElementId": "cashEarningsBBIndex",
-          "indicatorElementId": "cashEarningsBBChangeIndicator",
-          "changeTextElementId": "cashEarningsBBChangeText",
-          "chartElementId": "cashEarningsBBChart",
+          "calloutElementId": "mortgageApplicationDiscountsBBIndex",
+          "indicatorElementId": "mortgageApplicationDiscountsBBChangeIndicator",
+          "changeTextElementId": "mortgageApplicationDiscountsBBChangeText",
+          "chartElementId": "mortgageApplicationDiscountsBBChart",
           "data": [{
             "labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
             "series": [{
@@ -736,38 +973,11 @@
           "type": "Standard",
           "chartType": "Line",
           "category":  "Cash Earnings",
-          "class": "card",
-          "calloutElementId": "cashEarningsWIBIndex",
-          "indicatorElementId": "cashEarningsWIBChangeIndicator",
-          "changeTextElementId": "cashEarningsWIBChangeText",
-          "chartElementId": "cashEarningsWIBChart",
-          "data": [{
-            "labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
-            "series": [{
-              "name": "wib",
-              "data": [-0.7, -1, -0.5, -0.6, 2, 1, -0.05, -2, 0, 1.8, 0.4, 0.49]
-            }]
-          }],
-          "chartOptions":[{
-            "fullWidth": true,
-            "height": "60%",
-            "series": {       
-              "wib": {
-                "showPoint": false
-              }
-            },
-            "axisX": {
-              "showGrid": false,
-              "showLabel": false,
-              "offset": 0
-            },
-            "axisY": {
-              "showGrid": false,
-              "showLabel": false,
-              "offset": 0
-            },
-            "chartPadding": 1
-          }]
+          "class": "card-ghost",
+          "calloutElementId": "mortgageApplicationDiscountsWIBIndex",
+          "indicatorElementId": "mortgageApplicationDiscountsWIBChangeIndicator",
+          "changeTextElementId": "mortgageApplicationDiscountsWIBChangeText",
+          "chartElementId": "mortgageApplicationDiscountsWIBChart"
         },
         {
           "id": 19, 
@@ -777,38 +987,11 @@
           "type": "Standard",
           "chartType": "Line",
           "category":  "Cash Earnings",
-          "class": "card",
-          "calloutElementId": "cashEarningsBTIndex",
-          "indicatorElementId": "cashEarningsBTChangeIndicator",
-          "changeTextElementId": "cashEarningsBTChangeText",
-          "chartElementId": "cashEarningsBTChart",
-          "data": [{
-            "labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
-            "series": [{
-              "name": "bt",
-              "data": [0.7, 1, -0.5, -0.6, 0, 0.6, -0.15, -0.3, 0, 1.28, 0.5, 0.32]
-            }]
-          }],
-          "chartOptions":[{
-            "fullWidth": true,
-            "height": "60%",
-            "series": {       
-              "bt": {
-                "showPoint": false
-              }
-            },
-            "axisX": {
-              "showGrid": false,
-              "showLabel": false,
-              "offset": 0
-            },
-            "axisY": {
-              "showGrid": false,
-              "showLabel": false,
-              "offset": 0
-            },
-            "chartPadding": 1
-          }]
+          "class": "card-ghost",
+          "calloutElementId": "mortgageApplicationDiscountsBTIndex",
+          "indicatorElementId": "mortgageApplicationDiscountsBTChangeIndicator",
+          "changeTextElementId": "mortgageApplicationDiscountsBTChangeText",
+          "chartElementId": "mortgageApplicationDiscountsBTChart"
         },
         {
           "id": 20, 
@@ -818,38 +1001,11 @@
           "type": "Standard",
           "chartType": "Line",
           "category":  "Cash Earnings",
-          "class": "card",
-          "calloutElementId": "cashEarningsWNZIndex",
-          "indicatorElementId": "cashEarningsWNZChangeIndicator",
-          "changeTextElementId": "cashEarningsWNZChangeText",
-          "chartElementId": "cashEarningsWNZChart",
-          "data": [{
-            "labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
-            "series": [{
-              "name": "WNZ",
-              "data": [1.7, 1, -0.02, -0.6, 0, 0.6, -0.15, 0.3, 0, 0.28, 1.25, 1.32]
-            }]
-          }],
-          "chartOptions":[{
-            "fullWidth": true,
-            "height": "60%",
-            "series": {       
-              "WNZ": {
-                "showPoint": false
-              }
-            },
-            "axisX": {
-              "showGrid": false,
-              "showLabel": false,
-              "offset": 0
-            },
-            "axisY": {
-              "showGrid": false,
-              "showLabel": false,
-              "offset": 0
-            },
-            "chartPadding": 1
-          }]
+          "class": "card-ghost",
+          "calloutElementId": "mortgageApplicationDiscountsWNZIndex",
+          "indicatorElementId": "mortgageApplicationDiscountsWNZChangeIndicator",
+          "changeTextElementId": "mortgageApplicationDiscountsWNZChangeText",
+          "chartElementId": "mortgageApplicationDiscountsWNZChart"
         },
         {
           "id": 21, 
@@ -859,38 +1015,11 @@
           "type": "Standard",
           "chartType": "Line",
           "category":  "Cash Earnings",
-          "class": "card",
-          "calloutElementId": "cashEarningsGBUIndex",
-          "indicatorElementId": "cashEarningsGBUChangeIndicator",
-          "changeTextElementId": "cashEarningsGBUChangeText",
-          "chartElementId": "cashEarningsGBUChart",
-          "data": [{
-            "labels": ["1", "2", "3", "4", "5", "6", "7", "8"],
-            "series": [{
-              "name": "GBU",
-              "data": [1.7, 1, -0.02, -0.6, 0, 0.16, -0.15, 0.3, 0, 0.28, 1.35, 1.39]
-            }]
-          }],
-          "chartOptions":[{
-            "fullWidth": true,
-            "height": "60%",
-            "series": {       
-              "GBU": {
-                "showPoint": false
-              }
-            },
-            "axisX": {
-              "showGrid": false,
-              "showLabel": false,
-              "offset": 0
-            },
-            "axisY": {
-              "showGrid": false,
-              "showLabel": false,
-              "offset": 0
-            },
-            "chartPadding": 1
-          }]
+          "class": "card-ghost",
+          "calloutElementId": "mortgageApplicationDiscountsGBUIndex",
+          "indicatorElementId": "mortgageApplicationDiscountsGBUChangeIndicator",
+          "changeTextElementId": "mortgageApplicationDiscountsGBUChangeText",
+          "chartElementId": "mortgageApplicationDiscountsGBUChart"
         }]
       }]
     }]

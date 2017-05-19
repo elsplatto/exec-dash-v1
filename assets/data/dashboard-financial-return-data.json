@@ -6,6 +6,7 @@
       "title": "Return",
       "data": 
       [{
+        "rowId": "returnMarginsRow",
         "title": "Margins (%)",
         "row": 
         [{
@@ -304,6 +305,7 @@
         }]
       },
       {
+        "rowId": "returnROERow",
         "title": "ROE (%)",
         "row":
         [{
@@ -602,6 +604,7 @@
         }]
       },
       {
+        "rowId": "returnCashRow",
         "title": "Cash Earnings (%)",
         "row":
         [{

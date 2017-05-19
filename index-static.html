@@ -197,7 +197,7 @@
 			</div>			
 		</main>
 
-		<div class="footer-nav" id="metricNav">
+		<div class="footer-nav">
 			<div class="container active" id="financialFooterMetrics">
 				<div class="footer-metric-header">Financial Metrics<span class="icon icon-size-sm symbol-triangle"></span></div>
 				<ul>
@@ -243,15 +243,13 @@
 
 		var dataFile = dataBasePath+'dashboard-financial-strength-data.json';
 
-
-		var tl = {};
+		var undercardMax = 0;
 
 		$(document).on('click','.accordian-trigger', function(e) {	
 			var $clickedTrigger = $(e.target);
 			var $indicator = $clickedTrigger.find('span.icon');
 			var accordianOpen = null;
-			var holderRowId = $clickedTrigger.attr('data-target');
-			var $holderRow = $('#'+holderRowId);
+			var $holderRow = $('#'+$clickedTrigger.attr('data-target'));
 			var $parentRow = $holderRow.find('.dash-card-holder');
 			var underCards = $parentRow.children('.undercard');
 
@@ -261,7 +259,6 @@
 			var elementTopPos = 0;
 			var bottomMargin = 0;
 			var undercardArray = [];
-			var undercardMax = 0;
 
 			if ($indicator.hasClass('dir-down')) {
 				$indicator.removeClass('dir-down');
@@ -273,74 +270,54 @@
 				accordianOpen = true;
 			}
 
-			if (accordianOpen)
-			{
-				tl[holderRowId].reverse();
+			var tl = new TimelineLite();
+
+			for (var i=0;i<underCards.length;i++) {
+				console.dir($(underCards[i]));
+				$parentCard = $('#'+$(underCards[i]).attr('data-parent'));
+				pos = $(underCards[i]).attr('data-pos');
+				if (pos > undercardMax)
+			  {
+			  	undercardMax = pos;
+			  }
+			  parentPos = $parentCard.position();
+			  $(underCards[i]).css({
+			  	left: parentPos.left,
+			  	top: parentPos.top,
+			  	width: $parentCard.outerWidth(),
+			  	opacity: 1
+			  });
+
+			  undercardArray.push($(underCards[i]));
+
+			  elementTopPos = parseInt($parentCard.outerHeight() + ($(underCards[i]).outerHeight(true) * pos)) + parseInt(pos) + $clickedTrigger.outerHeight();			  
+
+			  tl.to($(underCards[i]),0.25,{top: elementTopPos}, "undercard");
 			}
-			else
-			{
-				for (var i=0;i<underCards.length;i++) {
-					parentRowId = $(underCards[i]).attr('data-parent');
-					$parentCard = $('#'+parentRowId);
-					pos = $(underCards[i]).attr('data-pos');
-					if (pos > undercardMax)
-				  {
-				  	undercardMax = pos;
-				  }
 
-				  parentPos = $parentCard.position();
-				  console.log('parentPos.top: ' + parentPos.top)
-				  $(underCards[i]).css({
-				  	left: parentPos.left,
-				  	top: parentPos.top,
-				  	width: $parentCard.outerWidth(),
-				  	opacity: 1
-				  });
+			bottomMargin = parseInt(($clickedTrigger.outerHeight() * parseInt(parseInt(undercardMax)+1)) + $clickedTrigger.outerHeight());
+			tl.to($holderRow,0.25,{marginBottom: bottomMargin}, "undercard");
 
-				  elementTopPos = parseInt(parentPos.top + $parentCard.outerHeight(true) + ($(underCards[i]).outerHeight(true) * pos)) + parseInt(pos) + $clickedTrigger.outerHeight(true);
-
-				 	if (i === 0)
-				 	{
-				  	tl[holderRowId] = new TimelineLite();		
-				 	}
-
-				  if (i === underCards.length - 1)
-				  {
-				  	bottomMargin = parseInt(($(underCards[0]).outerHeight(true) * parseInt(parseInt(undercardMax)+1)) + $clickedTrigger.outerHeight(true));
-				  	console.log('undercardMax: ' + undercardMax);
-				  	console.log('margin bottom for ' + parentRowId + ' is ' + bottomMargin);
-				  }
-
-				  tl[holderRowId].to($(underCards[i]),0.25,{top: elementTopPos}, holderRowId);
-				}
-
-				
-				tl[holderRowId].to($holderRow,0.25,{marginBottom: bottomMargin}, holderRowId);		
+			if (accordianOpen) {
+				tl.reverse();
 			}
+
 		});
 
 		$('.js-data-link').on('click', function(e) {
-			e.preventDefault();		
+			e.preventDefault();
 
-			var parentEl = $(this).closest('div');
-
-			var associatedFooterNav = $(this).attr('data-footer');
-			if (associatedFooterNav) {
+			var footerTarget = $(this).attr('data-footer');
+			if (footerTarget) {
 				$('.footer-nav .container.active').removeClass('active');
-				$('#' + associatedFooterNav).addClass('active')
+				$('#' + footerTarget).addClass('active')
 			}
 
+			var parentEl = $(this).closest('div');
 			parentEl.find('.js-data-link.active').removeClass('active');
 			$(this).addClass('active');
 			dataFile = dataBasePath + $(this).attr('data-file');
 			fetchDataFile(dataFile);
-
-			var footer = $(e.target).closest('.footer-nav.up');
-			console.log('isFooter: ' + footer);
-			console.dir(footer);
-			if (footer) {
-				footer.removeClass('up');
-			}
 		});
 
 		fetchDataFile(dataFile);
@@ -378,28 +355,25 @@
 			    		for (var j=0;j<metricData[i].row.length;j++) 
 			    		{
 			    	
-			    			if (metricData[i].row[j].data)
-			    			{
-						    	chartObj = new Chartist[metricData[i].row[j].chartType]('#'+ metricData[i].row[j].chartElementId, metricData[i].row[j].data[0], metricData[i].row[j].chartOptions[0]);
+					    	chartObj = new Chartist[metricData[i].row[j].chartType]('#'+ metricData[i].row[j].chartElementId, metricData[i].row[j].data[0], metricData[i].row[j].chartOptions[0]);
 
-									basePointChange = calculateBasePointChange(chartObj);								
+								basePointChange = calculateBasePointChange(chartObj);								
 
-									$('#' + metricData[i].row[j].calloutElementId).text(getLastIndex(chartObj));
+								$('#' + metricData[i].row[j].calloutElementId).text(getLastIndex(chartObj));
 
-									$('#' + metricData[i].row[j].changeTextElementId).text(basePointChange);
+								$('#' + metricData[i].row[j].changeTextElementId).text(basePointChange);
 
-									if (basePointChange > 0) {
-										$('#' + metricData[i].row[j].indicatorElementId).addClass('symbol-triangle');
-									}
-									else if (basePointChange < 0) {
-										$('#' + metricData[i].row[j].indicatorElementId).addClass('symbol-triangle-red dir-down');
-										$('#' + metricData[i].row[j].cardId).addClass('attention');
-									}
+								if (basePointChange > 0) {
+									$('#' + metricData[i].row[j].indicatorElementId).addClass('symbol-triangle');
+								}
+								else if (basePointChange < 0) {
+									$('#' + metricData[i].row[j].indicatorElementId).addClass('symbol-triangle-red dir-down');
+									$('#' + metricData[i].row[j].cardId).addClass('attention');
+								}
 
-									if (metricData[i].row[j].detailData) {
-										// console.log('detail data exists for ' + metricData[i].row[j].cardId);
-										rowHasUndercards = true;
-									}
+								if (metricData[i].row[j].detailData) {
+									// console.log('detail data exists for ' + metricData[i].row[j].cardId);
+									rowHasUndercards = true;
 								}
 
 			    		}
@@ -418,7 +392,7 @@
 			var html = null;
 
 			html = '<div class="accordian-trigger" data-target="'+rowId+'"><span class="icon icon-size-sm symbol-triangle dir-down"></span></div>';
-			// console.dir($('#' + rowId))
+			console.dir($('#' + rowId))
 			$('#' + rowId + ' .dash-card-holder').after(html);
 		}
 
