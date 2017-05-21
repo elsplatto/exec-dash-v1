@@ -243,8 +243,21 @@
 
 		var dataFile = dataBasePath+'dashboard-financial-strength-data.json';
 
+		var headerHeight = $('header').outerHeight();
+		var scrollTarget = headerHeight - 100;
+		if (headerHeight < 150) {
+			scrollTarget = headerHeight - 50;			
+		}
+
 
 		var tl = {};
+
+		function scrollTo(pos) {
+			if (!pos) {
+				pos = 0;
+			}
+			$('body').animate({scrollTop: pos}, 300)
+		}
 
 		$(document).on('click','.accordian-trigger', function(e) {	
 			var $clickedTrigger = $(e.target);
@@ -289,7 +302,7 @@
 				  }
 
 				  parentPos = $parentCard.position();
-				  console.log('parentPos.top: ' + parentPos.top)
+				  // console.log('parentPos.top: ' + parentPos.top)
 				  $(underCards[i]).css({
 				  	left: parentPos.left,
 				  	top: parentPos.top,
@@ -307,8 +320,6 @@
 				  if (i === underCards.length - 1)
 				  {
 				  	bottomMargin = parseInt(($(underCards[0]).outerHeight(true) * parseInt(parseInt(undercardMax)+1)) + $clickedTrigger.outerHeight(true));
-				  	console.log('undercardMax: ' + undercardMax);
-				  	console.log('margin bottom for ' + parentRowId + ' is ' + bottomMargin);
 				  }
 
 				  tl[holderRowId].to($(underCards[i]),0.25,{top: elementTopPos}, holderRowId);
@@ -327,7 +338,7 @@
 			var associatedFooterNav = $(this).attr('data-footer');
 			if (associatedFooterNav) {
 				$('.footer-nav .container.active').removeClass('active');
-				$('#' + associatedFooterNav).addClass('active')
+				$('#' + associatedFooterNav).addClass('active');				
 			}
 
 			parentEl.find('.js-data-link.active').removeClass('active');
@@ -336,10 +347,14 @@
 			fetchDataFile(dataFile);
 
 			var footer = $(e.target).closest('.footer-nav.up');
-			console.log('isFooter: ' + footer);
-			console.dir(footer);
+
 			if (footer) {
 				footer.removeClass('up');
+			}
+
+			if ($(window).scrollTop() > scrollTarget)
+			{
+				scrollTo(scrollTarget);
 			}
 		});
 
@@ -351,9 +366,9 @@
 				dashData = data;
 				loadDashGraphs();
 			}).error(function(data,status,responseJSON) {
-				console.log('error:' + status)
-				console.dir(responseJSON)
-				console.dir(data)
+				// console.log('error:' + status)
+				// console.dir(responseJSON)
+				// console.dir(data)
 			});
 		}
 
@@ -397,14 +412,12 @@
 									}
 
 									if (metricData[i].row[j].detailData) {
-										// console.log('detail data exists for ' + metricData[i].row[j].cardId);
 										rowHasUndercards = true;
 									}
 								}
 
 			    		}
 			    		if (rowHasUndercards) {
-			    			// console.log('Row ' + metricData[i].title + ' has undercards. Row ID: ' + metricData[i].rowId);
 								renderAccordianTrigger(metricData[i].rowId);
 			    		}
 			    		rowHasUndercards = false;
@@ -464,12 +477,6 @@
 				}
 			}
 		}		
-
-		var headerHeight = $('header').outerHeight();
-		var scrollTarget = headerHeight - 100;
-		if (headerHeight < 150) {
-			scrollTarget = headerHeight - 50;			
-		}
 
 		$('.footer-metric-header').click(function() {
 			$(this).closest('.footer-nav').toggleClass('up')
