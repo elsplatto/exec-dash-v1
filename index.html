@@ -224,8 +224,6 @@
 
 	<script src="assets/js/gui.min.js"></script>
 
-	<!-- <script src="assets/js/customs/index-charts.js"></script> -->
-
 	<script src="assets/js/plugins/mustache.min.js"></script>
 	<script src="assets/js/plugins/TimelineLite.js"></script>
 	<script src="assets/js/plugins/TweenLite.js"></script>
@@ -275,6 +273,9 @@
 			var bottomMargin = 0;
 			var undercardArray = [];
 			var undercardMax = 0;
+			var staggerBase = 0.04;
+			var staggerInterval = 0;
+			var staggerString = '';
 
 			if ($indicator.hasClass('dir-down')) {
 				$indicator.removeClass('dir-down');
@@ -296,13 +297,14 @@
 					parentRowId = $(underCards[i]).attr('data-parent');
 					$parentCard = $('#'+parentRowId);
 					pos = $(underCards[i]).attr('data-pos');
+					staggerString = '';
+					staggerInterval = staggerBase * pos;
+					console.log('staggerInterval: ' + staggerInterval);
 					if (pos > undercardMax)
 				  {
 				  	undercardMax = pos;
 				  }
-
 				  parentPos = $parentCard.position();
-				  // console.log('parentPos.top: ' + parentPos.top)
 				  $(underCards[i]).css({
 				  	left: parentPos.left,
 				  	top: parentPos.top,
@@ -322,7 +324,7 @@
 				  	bottomMargin = parseInt(($(underCards[0]).outerHeight(true) * parseInt(parseInt(undercardMax)+1)) + $clickedTrigger.outerHeight(true));
 				  }
 
-				  tl[holderRowId].to($(underCards[i]),0.25,{top: elementTopPos}, holderRowId);
+				  tl[holderRowId].to($(underCards[i]),0.25,{top: elementTopPos}, holderRowId + '+='+staggerInterval);
 				}
 
 				
